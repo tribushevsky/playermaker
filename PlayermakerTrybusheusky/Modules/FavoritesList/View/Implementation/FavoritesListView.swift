@@ -122,6 +122,8 @@ extension Reactive where Base: FavoritesListView {
 
 	var sortMode: Binder<FavoritesListSortMode> {
 		Binder(base) { view, sortMode in
+			view.tableView.scrollToTop(animated: false)
+
 			switch sortMode {
 			case .name:
 				view.sortNameButton.backgroundColor = Colors.General.highlight.color
