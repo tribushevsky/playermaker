@@ -12,6 +12,7 @@ final class ServiceDependencyResolverAssembly: Assembly {
 	public func assemble(container: Container) {
 		registerDependencyResolver(container: container)
 		registerIdentityService(container: container)
+		registerLocalStorageService(container: container)
 	}
 
 }
@@ -29,6 +30,16 @@ extension ServiceDependencyResolverAssembly {
 	func registerIdentityService(container: Container) {
 		container.register(IdentityServiceProtocol.self) { _ in
 			StaticIdentityService()
+		}.inObjectScope(.container)
+	}
+
+	func registerLocalStorageService(container: Container) {
+		container.register(ReactiveLocalStorageServiceProtocol.self) { _ in
+			guard let service = try? RealmLocalStorageService() else {
+				fatalError("Local storage initialization error")
+			}
+
+			return service
 		}.inObjectScope(.container)
 	}
 

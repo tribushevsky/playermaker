@@ -8,6 +8,8 @@ target 'PlayermakerTrybusheusky' do
 	pod 'SnapKit', '~> 5.7.1'
 	pod 'SwiftGen', '~> 6.6'
 	pod 'Swinject', '~> 2.8'
+	pod 'RealmSwift', '~> 10.32.3'
+	pod 'RxRealm', '~> 5.0.4'
 
 end
 

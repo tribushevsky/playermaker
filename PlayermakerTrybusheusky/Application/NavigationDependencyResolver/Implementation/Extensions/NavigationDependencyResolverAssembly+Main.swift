@@ -45,7 +45,9 @@ extension NavigationDependencyResolverAssembly {
 		}.inObjectScope(.transient)
 
 		container.register(FavoritesListDependenciesProtocol.self) { resolver in
-			FavoritesListDependencies()
+			FavoritesListDependencies(
+				storage: resolver.resolve(ReactiveLocalStorageServiceProtocol.self)!
+			)
 		}.inObjectScope(.transient)
 	}
 
