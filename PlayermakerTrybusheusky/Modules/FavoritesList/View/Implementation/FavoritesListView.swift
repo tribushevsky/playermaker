@@ -92,7 +92,9 @@ extension FavoritesListView {
 			willDismissTrigger: rx.willBeingDismissed.asDriver(onErrorJustReturn: true).filter { $0 }.mapToVoid(),
 			searchDevicesTrigger: mainButton.rx.tap.asDriver(),
 			sortByNameTrigger: sortNameButton.rx.tap.asDriver(),
-			sortByUUIDTrigger: sortUUIDButton.rx.tap.asDriver()
+			sortByUUIDTrigger: sortUUIDButton.rx.tap.asDriver(),
+			editDeviceTrigger: itemEditSelectRelay.asDriverOnErrorDoNothing(),
+			deleteDeviceTrigger: itemDeleteSelectRelay.asDriverOnErrorDoNothing()
 		)
 
 		let output = viewModel.transform(input: input)
@@ -100,8 +102,8 @@ extension FavoritesListView {
 		output.sortMode.drive(rx.sortMode).disposed(by: disposeBag)
 		output.favorites.map { !$0.isEmpty }.drive(rx.isFavoritesVisible).disposed(by: disposeBag)
 		output.favorites.map {[FavoriteListItemSection(items: $0)] }
-		.drive(tableView.rx.items(dataSource: dataSource))
-		.disposed(by: disposeBag)
+			.drive(tableView.rx.items(dataSource: dataSource))
+			.disposed(by: disposeBag)
 
 		output.tools.drive().disposed(by: disposeBag)
 	}

@@ -7,6 +7,7 @@
 
 struct FavoriteListItemViewModel {
 
+	let uuid: String
 	let title: String
 	let subtitle: String
 

@@ -10,6 +10,30 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  internal enum Delete {
+    internal enum Sure {
+      /// Delete
+      internal static let action = L10n.tr("Localizable", "delete.sure.action", fallback: "Delete")
+      /// Cancel
+      internal static let cancel = L10n.tr("Localizable", "delete.sure.cancel", fallback: "Cancel")
+      /// ARE YOU SURE?
+      internal static let title = L10n.tr("Localizable", "delete.sure.title", fallback: "ARE YOU SURE?")
+    }
+  }
+  internal enum Error {
+    internal enum Action {
+      /// OK
+      internal static let ok = L10n.tr("Localizable", "error.action.ok", fallback: "OK")
+    }
+    internal enum SomethingWentWrong {
+      internal enum TryLater {
+        /// Please, try later!
+        internal static let message = L10n.tr("Localizable", "error.something_went_wrong.try_later.message", fallback: "Please, try later!")
+        /// Something went wrong
+        internal static let title = L10n.tr("Localizable", "error.something_went_wrong.try_later.title", fallback: "Something went wrong")
+      }
+    }
+  }
   internal enum FavoritesList {
     /// Add New Devices
     internal static let mainButton = L10n.tr("Localizable", "favorites_list.main_button", fallback: "Add New Devices")

@@ -117,6 +117,9 @@
 		6F8C5FB32E3E6E8C00476A05 /* FavoriteListItemSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FB22E3E6E8300476A05 /* FavoriteListItemSection.swift */; };
 		6F8C5FB52E3E73F400476A05 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FB42E3E73EF00476A05 /* GradientView.swift */; };
 		6F8C5FB82E3E773900476A05 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FB72E3E773400476A05 /* UITableView+Extensions.swift */; };
+		6F8C5FBB2E3E789A00476A05 /* CrucialActionHandableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FBA2E3E789100476A05 /* CrucialActionHandableProtocol.swift */; };
+		6F8C5FBD2E3E7BE500476A05 /* NavigatorErrorCatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FBC2E3E7BE000476A05 /* NavigatorErrorCatcher.swift */; };
+		6F8C5FC32E3E7CB300476A05 /* LocalStorageCRUDError+LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FC22E3E7CB000476A05 /* LocalStorageCRUDError+LocalizedError.swift */; };
 		92FB93B698F0C4872E34B26D /* Pods_PlayermakerTrybusheusky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6ECABDBD00865681ED47E3D /* Pods_PlayermakerTrybusheusky.framework */; };
 /* End PBXBuildFile section */
 
@@ -236,6 +239,9 @@
 		6F8C5FB22E3E6E8300476A05 /* FavoriteListItemSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListItemSection.swift; sourceTree = "<group>"; };
 		6F8C5FB42E3E73EF00476A05 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		6F8C5FB72E3E773400476A05 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		6F8C5FBA2E3E789100476A05 /* CrucialActionHandableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrucialActionHandableProtocol.swift; sourceTree = "<group>"; };
+		6F8C5FBC2E3E7BE000476A05 /* NavigatorErrorCatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorErrorCatcher.swift; sourceTree = "<group>"; };
+		6F8C5FC22E3E7CB000476A05 /* LocalStorageCRUDError+LocalizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalStorageCRUDError+LocalizedError.swift"; sourceTree = "<group>"; };
 		988F42D57C0C57D5C0AE27EE /* Pods-PlayermakerTrybusheusky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayermakerTrybusheusky.debug.xcconfig"; path = "Target Support Files/Pods-PlayermakerTrybusheusky/Pods-PlayermakerTrybusheusky.debug.xcconfig"; sourceTree = "<group>"; };
 		E6ECABDBD00865681ED47E3D /* Pods_PlayermakerTrybusheusky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayermakerTrybusheusky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -285,6 +291,7 @@
 		6F08228B2E3982350009A95E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6F8C5FB92E3E788600476A05 /* Handlers */,
 				6F8C5F862E3E323800476A05 /* Models */,
 				6F0822DC2E39FE100009A95E /* ModuleCore */,
 				6F8C5F042E3C0E1000476A05 /* OptionalType.swift */,
@@ -612,6 +619,7 @@
 		6F0822DE2E39FF170009A95E /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
+				6F8C5FBC2E3E7BE000476A05 /* NavigatorErrorCatcher.swift */,
 				6F8C5F062E3C152800476A05 /* Window.swift */,
 				6F0822F62E3A098D0009A95E /* ViewController.swift */,
 				6F0822E12E39FF420009A95E /* Navigator.swift */,
@@ -622,6 +630,7 @@
 		6F0822E62E3A067E0009A95E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6F8C5FC12E3E7CAB00476A05 /* Errors */,
 				6F8C5FB62E3E772B00476A05 /* UIKit */,
 				6F8C5F9C2E3E469D00476A05 /* Adapters */,
 				6F0822E82E3A06A30009A95E /* Rx */,
@@ -1412,6 +1421,22 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		6F8C5FB92E3E788600476A05 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				6F8C5FBA2E3E789100476A05 /* CrucialActionHandableProtocol.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		6F8C5FC12E3E7CAB00476A05 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				6F8C5FC22E3E7CB000476A05 /* LocalStorageCRUDError+LocalizedError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		A93FFB129B1D4E42A8C13AA3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1603,6 +1628,7 @@
 				6F8C5F542E3D20EE00476A05 /* SearchDevicesDependencies.swift in Sources */,
 				6F8C5F552E3D20EE00476A05 /* SearchDevicesContext.swift in Sources */,
 				6F8C5F562E3D20EE00476A05 /* SearchDevicesUseCase.swift in Sources */,
+				6F8C5FBB2E3E789A00476A05 /* CrucialActionHandableProtocol.swift in Sources */,
 				6F0822F52E3A080A0009A95E /* Signal+Extensions.swift in Sources */,
 				6F0822C72E3982CC0009A95E /* LaunchViewModel.swift in Sources */,
 				6F0822C82E3982CC0009A95E /* LaunchNavigatorProtocol.swift in Sources */,
@@ -1646,6 +1672,7 @@
 				6F833F102E396E7300FFA71B /* NavigationDependencyResolverAssembly.swift in Sources */,
 				6F833F0C2E396A2D00FFA71B /* NavigationDependencyResolverProtocol.swift in Sources */,
 				6F8C5EFF2E3C0C4400476A05 /* StaticIdentityService.swift in Sources */,
+				6F8C5FBD2E3E7BE500476A05 /* NavigatorErrorCatcher.swift in Sources */,
 				6F0822F32E3A07EF0009A95E /* Observable+Extensions.swift in Sources */,
 				6F0822EC2E3A06D90009A95E /* UIViewController+Rx.swift in Sources */,
 				6F833F142E396F3A00FFA71B /* NavigationDependencyResolverAssembly+Root.swift in Sources */,
@@ -1667,6 +1694,7 @@
 				6F8C5FB32E3E6E8C00476A05 /* FavoriteListItemSection.swift in Sources */,
 				6F8C5F302E3CAF0700476A05 /* FavoritesListNavigator.swift in Sources */,
 				6F833F062E39694700FFA71B /* AppAssembly.swift in Sources */,
+				6F8C5FC32E3E7CB300476A05 /* LocalStorageCRUDError+LocalizedError.swift in Sources */,
 				6F0822E02E39FF1E0009A95E /* ViewModelType.swift in Sources */,
 				6F833F2D2E39764900FFA71B /* ServiceDependencyResolverAssembly.swift in Sources */,
 				6F833EF92E39669C00FFA71B /* SceneDelegate.swift in Sources */,

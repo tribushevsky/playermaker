@@ -7,9 +7,20 @@
 */
 
 "identity.developer_name" = "Vladimir Tribushevsky";
+
 "favorites_list.title" = "Favorite Devices";
 "favorites_list.sort.name" = "Name";
 "favorites_list.sort.uuid" = "UUID";
 "favorites_list.placeholder" = "Not found";
 "favorites_list.main_button" = "Add New Devices";
+
 "search_devices.title" = "Search Devices...";
+
+"delete.sure.title" = "ARE YOU SURE?";
+"delete.sure.action" = "Delete";
+"delete.sure.cancel" = "Cancel";
+
+"error.something_went_wrong.try_later.title" = "Something went wrong";
+"error.something_went_wrong.try_later.message" = "Please, try later!";
+
+"error.action.ok" = "OK";

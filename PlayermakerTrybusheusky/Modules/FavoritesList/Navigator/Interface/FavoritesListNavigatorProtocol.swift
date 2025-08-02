@@ -7,7 +7,7 @@
 
 import RxSwift
 
-protocol FavoritesListNavigatorProtocol: Navigator<Void> {
+protocol FavoritesListNavigatorProtocol: NavigatorErrorCatcher<Void> {
 
 	func routeToSearchDevices() -> Observable<Void>
 
