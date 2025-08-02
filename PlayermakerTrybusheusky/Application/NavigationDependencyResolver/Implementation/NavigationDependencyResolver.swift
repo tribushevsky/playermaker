@@ -37,8 +37,8 @@ extension NavigationDependencyResolver: NavigationDependencyResolverProtocol {
 		return resolver.resolve(SearchDevicesView.self, argument: navigationController)!
 	}
 
-	func editDevice() -> EditDeviceView {
-		resolver.resolve(EditDeviceView.self)!
+	func editDevice(device: FavoriteDeviceModel) -> EditDeviceView {
+		resolver.resolve(EditDeviceView.self, argument: device)!
 	}
 
 }

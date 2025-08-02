@@ -11,7 +11,17 @@ import RxCocoa
 
 final class EditDeviceView: ViewController<EditDeviceViewModel> {
 
-	// MARK: - Stored Views / Outlets
+	// MARK: - Stored Properties / Outlets
+
+	@IBOutlet private weak var titleLabel: UILabel!
+	@IBOutlet private weak var closeButton: UIButton!
+	@IBOutlet private weak var saveButton: UIButton!
+	@IBOutlet private weak var uuidTitleLabel: UILabel!
+	@IBOutlet private weak var nameTitleLabel: UILabel!
+	@IBOutlet private weak var uuidTextField: UITextField!
+	@IBOutlet private weak var nameTextField: UITextField!
+	@IBOutlet private weak var uuidContentContainerView: UIView!
+	@IBOutlet private weak var nameContentContainerView: UIView!
 
 	// MARK: - Lifecycle
 
@@ -23,6 +33,12 @@ final class EditDeviceView: ViewController<EditDeviceViewModel> {
 		setupBinding()
 	}
 
+	override func viewDidLayoutSubviews() {
+		super.viewDidLayoutSubviews()
+
+		saveButton.layer.cornerRadius = saveButton.bounds.height / 2
+	}
+
 }
 
 // MARK: - Setup Binding
@@ -30,27 +46,47 @@ final class EditDeviceView: ViewController<EditDeviceViewModel> {
 extension EditDeviceView {
 
 	private func setupView() {
+		setupHideKeyboardGestures()
 
+		uuidContentContainerView.layer.cornerRadius = 10
+		nameContentContainerView.layer.cornerRadius = 10
+		uuidTextField.layer.cornerRadius = 4
+		nameTextField.layer.cornerRadius = 4
+	}
+
+	private func setupHideKeyboardGestures() {
+		let endEditingGesture = UITapGestureRecognizer(target: self, action: #selector(endEditing))
+		endEditingGesture.cancelsTouchesInView = false
+		view.addGestureRecognizer(endEditingGesture)
 	}
 
 	private func localize() {
+		typealias Loc = L10n.DeviceInfo
 
+		titleLabel.text = Loc.title
+		uuidTitleLabel.text = Loc.uuidTitle
+		nameTitleLabel.text = Loc.nameTitle
+		saveButton.setTitle(Loc.save, for: .normal)
 	}
 
 	private func setupBinding() {
 		let input = EditDeviceViewModel.Input(
 			willAppearTrigger: rx.viewWillAppear.asDriverOnErrorDoNothing(),
-			willDismissTrigger: rx.willBeingDismissed.asDriver(onErrorJustReturn: true).filter { $0 }.mapToVoid()
+			willDismissTrigger: rx.willBeingDismissed.asDriver(onErrorJustReturn: true).filter { $0 }.mapToVoid(),
+			nameChangingTrigger: nameTextField.rx.text.unwrappedNever().asDriverOnErrorDoNothing(),
+			saveTrigger: saveButton.rx.tap.asDriver(),
+			closeTrigger: closeButton.rx.tap.asDriver()
 		)
+
 		let output = viewModel.transform(input: input)
 
+		output.deviceUUID.drive(uuidTextField.rx.text).disposed(by: disposeBag)
+		output.deviceName.drive(nameTextField.rx.text).disposed(by: disposeBag)
 		output.tools.drive().disposed(by: disposeBag)
 	}
 
-}
-
-// MARK: - Reactive
-
-extension Reactive where Base: EditDeviceView {
+	@objc private func endEditing() {
+		view.endEditing(true)
+	}
 
 }

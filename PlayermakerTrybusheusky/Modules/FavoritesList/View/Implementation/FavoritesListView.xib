@@ -60,6 +60,7 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2K-Nk-FCh">
                                                             <rect key="frame" x="0.0" y="0.0" width="177.66666666666666" height="45"/>
                                                             <color key="backgroundColor" name="General/highlight"/>
+                                                            <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" title="_Name">
                                                                 <color key="titleColor" name="General/accent_light"/>
@@ -68,6 +69,7 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpf-8z-IVh">
                                                             <rect key="frame" x="183.66666666666663" y="0.0" width="177.33333333333337" height="45"/>
                                                             <color key="backgroundColor" name="General/unselected"/>
+                                                            <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" title="_UUID">
                                                                 <color key="titleColor" name="General/accent_light"/>

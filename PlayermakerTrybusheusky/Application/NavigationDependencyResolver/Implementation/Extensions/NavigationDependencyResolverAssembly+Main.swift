@@ -90,20 +90,20 @@ extension NavigationDependencyResolverAssembly {
 	}
 
 	func registerEditDevice(container: Container) {
-		container.register(EditDeviceView.self) { resolver in
-			EditDeviceView(viewModel: resolver.resolve(EditDeviceViewModel.self)!)
+		container.register(EditDeviceView.self) { (resolver, device: FavoriteDeviceModel) in
+			EditDeviceView(viewModel: resolver.resolve(EditDeviceViewModel.self, argument: device)!)
 		}.inObjectScope(.transient)
 
-		container.register(EditDeviceViewModel.self) { resolver in
+		container.register(EditDeviceViewModel.self) { (resolver, device: FavoriteDeviceModel) in
 			EditDeviceViewModel(
-				context: resolver.resolve(EditDeviceContextProtocol.self)!,
+				context: resolver.resolve(EditDeviceContextProtocol.self, argument: device)!,
 				useCase: resolver.resolve(EditDeviceUseCaseProtocol.self)!,
 				navigator: resolver.resolve(EditDeviceNavigatorProtocol.self)!
 			)
 		}.inObjectScope(.transient)
 
-		container.register(EditDeviceContextProtocol.self) { _ in
-			EditDeviceContext()
+		container.register(EditDeviceContextProtocol.self) { (_, device: FavoriteDeviceModel) in
+			EditDeviceContext(device: device)
 		}.inObjectScope(.transient)
 
 		container.register(EditDeviceUseCaseProtocol.self) { resolver in

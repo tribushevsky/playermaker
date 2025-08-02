@@ -9,9 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-    <array key="Nunito-Bold.ttf">
-        <string>Nunito-Bold</string>
-    </array>
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LaunchView" customModule="PlayermakerTrybusheusky" customModuleProvider="target">
@@ -33,12 +33,12 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Developer Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDe-EQ-kYj">
                             <rect key="frame" x="0.0" y="0.0" width="206.66666666666666" height="34.333333333333336"/>
                             <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="25"/>
-                            <color key="textColor" name="title"/>
+                            <color key="textColor" name="General/title"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="BSQ-Jz-h8E">
                             <rect key="frame" x="84.666666666666671" y="50.333333333333314" width="37" height="37"/>
-                            <color key="color" name="icon"/>
+                            <color key="color" name="General/icon"/>
                         </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,10 +67,10 @@
         <namedColor name="General/background">
             <color red="0.94117647058823528" green="0.94509803921568625" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="icon">
+        <namedColor name="General/icon">
             <color red="0.5725490196078431" green="0.60784313725490191" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="title">
+        <namedColor name="General/title">
             <color red="0.16862745098039217" green="0.25098039215686274" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>

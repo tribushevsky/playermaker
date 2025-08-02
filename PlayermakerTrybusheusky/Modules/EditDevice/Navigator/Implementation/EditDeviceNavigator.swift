@@ -5,4 +5,4 @@
 //  Created by Uladzimir Trybusheusky on 29/07/2025.
 //
 
-final class EditDeviceNavigator: Navigator<Void>, EditDeviceNavigatorProtocol {}
+final class EditDeviceNavigator: Navigator<FavoriteDeviceModel>, EditDeviceNavigatorProtocol {}

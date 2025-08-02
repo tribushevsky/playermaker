@@ -20,6 +20,16 @@ internal enum L10n {
       internal static let title = L10n.tr("Localizable", "delete.sure.title", fallback: "ARE YOU SURE?")
     }
   }
+  internal enum DeviceInfo {
+    /// Name:
+    internal static let nameTitle = L10n.tr("Localizable", "device_info.name_title", fallback: "Name:")
+    /// Save
+    internal static let save = L10n.tr("Localizable", "device_info.save", fallback: "Save")
+    /// Device info
+    internal static let title = L10n.tr("Localizable", "device_info.title", fallback: "Device info")
+    /// UUID:
+    internal static let uuidTitle = L10n.tr("Localizable", "device_info.uuid_title", fallback: "UUID:")
+  }
   internal enum Error {
     internal enum Action {
       /// OK

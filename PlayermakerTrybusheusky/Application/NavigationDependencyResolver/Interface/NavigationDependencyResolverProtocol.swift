@@ -13,6 +13,6 @@ protocol NavigationDependencyResolverProtocol {
 	func launch(developerName: String) -> LaunchView
 	func favoritesList() -> FavoritesListView
 	func searchDevices(navigationController: UINavigationController) -> SearchDevicesView
-	func editDevice() -> EditDeviceView
+	func editDevice(device: FavoriteDeviceModel) -> EditDeviceView
 
 }

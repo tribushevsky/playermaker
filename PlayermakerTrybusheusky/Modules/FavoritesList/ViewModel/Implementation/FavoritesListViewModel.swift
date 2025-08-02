@@ -60,7 +60,7 @@ extension FavoritesListViewModel {
 		let tools = Driver<Void>.merge(
 			handleSearchDevices(trigger: input.searchDevicesTrigger.throttle(.milliseconds(300))),
 			handleDeleteFavorite(deviceTrigger: input.deleteDeviceTrigger.throttle(.milliseconds(300)), favorites: favoritesDevices),
-			handleEditFavorite(deviceTrigger: input.editDeviceTrigger.throttle(.milliseconds(300)))
+			handleEditFavorite(deviceTrigger: input.editDeviceTrigger.throttle(.milliseconds(300)), favorites: favoritesDevices)
 		).take(until: input.willDismissTrigger.take(1).asObservable())
 
 		return Output(
@@ -134,8 +134,29 @@ extension FavoritesListViewModel {
 			.mapToVoid()
 	}
 
-	func handleEditFavorite(deviceTrigger: Driver<FavoriteListItemViewModel>)  -> Driver<Void> {
-		deviceTrigger.mapToVoid() // FIXME
+	func handleEditFavorite(
+		deviceTrigger: Driver<FavoriteListItemViewModel>,
+		favorites: Driver<[FavoriteDeviceModel]>
+	) -> Driver<Void> {
+		deviceTrigger
+			.withLatestFrom(favorites) { ($0, $1) }
+			.map { params in
+				params.1.first(where: { $0.uuid == params.0.uuid })
+			}
+			.unwrappedNever()
+			.flatMapLatest { [unowned self] device -> Driver<Void> in
+				navigator.routeToEditDevice(
+					device: device
+				)
+				.filter { $0 != device }
+				.flatMapLatest { [unowned self] updatedDevice in
+					useCase
+						.updateDevice(device: updatedDevice)
+				}.asDriverCatchErrorDoNothing(
+					action: .init(title: L10n.Error.Action.ok, style: .ok),
+					catcher: navigator
+				).mapToVoid()
+			}
 	}
 
 	func handleFavorites(with sortMode: Driver<FavoritesListSortMode>) -> Driver<[FavoriteDeviceModel]> {

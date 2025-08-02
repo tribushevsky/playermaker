@@ -11,7 +11,7 @@ import RxCocoa
 
 final class LaunchView: ViewController<LaunchViewModel> {
 
-	// MARK: - Stored Views / Outlets
+	// MARK: - Stored Properties / Outlets
 
 	@IBOutlet fileprivate weak var contentContainerView: UIView!
 	@IBOutlet fileprivate weak var titleLabel: UILabel!

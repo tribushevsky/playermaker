@@ -120,6 +120,7 @@
 		6F8C5FBB2E3E789A00476A05 /* CrucialActionHandableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FBA2E3E789100476A05 /* CrucialActionHandableProtocol.swift */; };
 		6F8C5FBD2E3E7BE500476A05 /* NavigatorErrorCatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FBC2E3E7BE000476A05 /* NavigatorErrorCatcher.swift */; };
 		6F8C5FC32E3E7CB300476A05 /* LocalStorageCRUDError+LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FC22E3E7CB000476A05 /* LocalStorageCRUDError+LocalizedError.swift */; };
+		6F8C5FC92E3EB58F00476A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F8C5FC82E3EB58F00476A05 /* LaunchScreen.storyboard */; };
 		92FB93B698F0C4872E34B26D /* Pods_PlayermakerTrybusheusky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6ECABDBD00865681ED47E3D /* Pods_PlayermakerTrybusheusky.framework */; };
 /* End PBXBuildFile section */
 
@@ -242,6 +243,7 @@
 		6F8C5FBA2E3E789100476A05 /* CrucialActionHandableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrucialActionHandableProtocol.swift; sourceTree = "<group>"; };
 		6F8C5FBC2E3E7BE000476A05 /* NavigatorErrorCatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorErrorCatcher.swift; sourceTree = "<group>"; };
 		6F8C5FC22E3E7CB000476A05 /* LocalStorageCRUDError+LocalizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalStorageCRUDError+LocalizedError.swift"; sourceTree = "<group>"; };
+		6F8C5FC82E3EB58F00476A05 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		988F42D57C0C57D5C0AE27EE /* Pods-PlayermakerTrybusheusky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayermakerTrybusheusky.debug.xcconfig"; path = "Target Support Files/Pods-PlayermakerTrybusheusky/Pods-PlayermakerTrybusheusky.debug.xcconfig"; sourceTree = "<group>"; };
 		E6ECABDBD00865681ED47E3D /* Pods_PlayermakerTrybusheusky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayermakerTrybusheusky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -719,6 +721,7 @@
 				6F833F052E39694600FFA71B /* AppAssembly.swift */,
 				6F833EEE2E39669C00FFA71B /* AppDelegate.swift */,
 				6F833EF52E39669C00FFA71B /* SceneDelegate.swift */,
+				6F8C5FC82E3EB58F00476A05 /* LaunchScreen.storyboard */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -1524,6 +1527,7 @@
 				6F833F342E39788500FFA71B /* Nunito-Medium.ttf in Resources */,
 				6F833F352E39788500FFA71B /* Nunito-Regular.ttf in Resources */,
 				6F833F362E39788500FFA71B /* Nunito-SemiBold.ttf in Resources */,
+				6F8C5FC92E3EB58F00476A05 /* LaunchScreen.storyboard in Resources */,
 				6F833F372E39788500FFA71B /* Nunito-Bold.ttf in Resources */,
 				6F833F252E39758C00FFA71B /* Localizable.strings in Resources */,
 				6F0822C52E3982CC0009A95E /* LaunchView.xib in Resources */,
@@ -1731,7 +1735,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PlayermakerTrybusheusky/SupportingFiles/Settings & Startup/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15;
@@ -1760,7 +1764,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PlayermakerTrybusheusky/SupportingFiles/Settings & Startup/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15;

@@ -20,6 +20,11 @@
 "delete.sure.action" = "Delete";
 "delete.sure.cancel" = "Cancel";
 
+"device_info.title" = "Device info";
+"device_info.uuid_title" = "UUID:";
+"device_info.name_title" = "Name:";
+"device_info.save" = "Save";
+
 "error.something_went_wrong.try_later.title" = "Something went wrong";
 "error.something_went_wrong.try_later.message" = "Please, try later!";
 
