@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  PlayermakerTrybusheusky
+
+  Created by Uladzimir Trybusheusky on 30/07/2025.
+  
+*/
+
+"identity.developer_name" = "Vladimir Tribushevsky";
+"favorites_list.main_button" = "Add New Devices";
+"search_devices.title" = "Search Devices...";

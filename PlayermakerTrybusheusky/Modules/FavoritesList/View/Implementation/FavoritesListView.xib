@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritesListView" customModule="PlayermakerTrybusheusky" customModuleProvider="target">
+            <connections>
+                <outlet property="mainButton" destination="kvR-B4-g6p" id="lA5-cb-dHr"/>
+                <outlet property="tableView" destination="UNk-ck-82m" id="KMa-4M-sXw"/>
+                <outlet property="view" destination="iN0-l3-epB" id="U8i-YK-e00"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNk-ck-82m">
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olS-k7-zam">
+                    <rect key="frame" x="0.0" y="712" width="393" height="140"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvR-B4-g6p">
+                            <rect key="frame" x="36" y="40" width="321" height="60"/>
+                            <color key="backgroundColor" name="General/highlight"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="C64-U3-4Ja"/>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="360" id="lyL-P4-7Zh"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="20"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="_Add New Device">
+                                <color key="titleColor" name="General/accent_light"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="kvR-B4-g6p" secondAttribute="trailing" priority="900" constant="36" id="ABQ-aB-4zP"/>
+                        <constraint firstItem="kvR-B4-g6p" firstAttribute="leading" secondItem="olS-k7-zam" secondAttribute="leading" priority="900" constant="36" id="BQ7-8r-P4w"/>
+                        <constraint firstItem="kvR-B4-g6p" firstAttribute="centerY" secondItem="olS-k7-zam" secondAttribute="centerY" id="Y2Y-8v-Zq1"/>
+                        <constraint firstAttribute="height" constant="140" id="reh-5h-oGe"/>
+                        <constraint firstItem="kvR-B4-g6p" firstAttribute="centerX" secondItem="olS-k7-zam" secondAttribute="centerX" id="rli-qb-jk0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="General/background"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="UNk-ck-82m" secondAttribute="bottom" id="Amd-LX-tla"/>
+                <constraint firstAttribute="trailing" secondItem="UNk-ck-82m" secondAttribute="trailing" id="UAJ-jJ-08R"/>
+                <constraint firstItem="UNk-ck-82m" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="YVI-pl-Zqt"/>
+                <constraint firstItem="UNk-ck-82m" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fVF-iR-oKh"/>
+                <constraint firstItem="olS-k7-zam" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="k7u-Gi-6sl"/>
+                <constraint firstAttribute="bottom" secondItem="olS-k7-zam" secondAttribute="bottom" id="oP4-CA-g2I"/>
+                <constraint firstAttribute="trailing" secondItem="olS-k7-zam" secondAttribute="trailing" id="z2I-aZ-V4u"/>
+            </constraints>
+            <point key="canvasLocation" x="139.69465648854961" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="General/accent_light">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="General/background">
+            <color red="0.94117647058823528" green="0.94509803921568625" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="General/highlight">
+            <color red="0.50980392156862742" green="0.27450980392156865" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

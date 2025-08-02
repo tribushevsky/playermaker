@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchDevicesView" customModule="PlayermakerTrybusheusky" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="UNJ-xX-cgJ" id="sLf-Pd-4ZX"/>
+                <outlet property="titleLabel" destination="dn8-l3-Mfw" id="DLT-nw-THn"/>
+                <outlet property="view" destination="iN0-l3-epB" id="U8i-YK-e00"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaa-tP-4ST">
+                    <rect key="frame" x="0.0" y="59" width="393" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Search Devices..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dn8-l3-Mfw">
+                            <rect key="frame" x="105.33333333333333" y="14.999999999999998" width="182.33333333333337" height="30.333333333333329"/>
+                            <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="22"/>
+                            <color key="textColor" name="General/title"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNJ-xX-cgJ">
+                            <rect key="frame" x="343" y="8" width="44" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="YIr-D9-ieN"/>
+                                <constraint firstAttribute="width" constant="44" id="qTz-MJ-Ydo"/>
+                            </constraints>
+                            <color key="tintColor" name="General/icon"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="General/close"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="dn8-l3-Mfw" firstAttribute="centerX" secondItem="aaa-tP-4ST" secondAttribute="centerX" id="3Jx-ju-4l1"/>
+                        <constraint firstItem="dn8-l3-Mfw" firstAttribute="centerY" secondItem="aaa-tP-4ST" secondAttribute="centerY" id="Fab-vs-6lo"/>
+                        <constraint firstAttribute="trailing" secondItem="UNJ-xX-cgJ" secondAttribute="trailing" constant="6" id="TBh-zh-01w"/>
+                        <constraint firstAttribute="height" constant="60" id="dJf-rX-MQB"/>
+                        <constraint firstItem="UNJ-xX-cgJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dn8-l3-Mfw" secondAttribute="trailing" id="gSa-Rh-ctK"/>
+                        <constraint firstItem="UNJ-xX-cgJ" firstAttribute="centerY" secondItem="aaa-tP-4ST" secondAttribute="centerY" id="kTf-Aw-kJq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="General/background"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aaa-tP-4ST" secondAttribute="trailing" id="PH3-bP-iVO"/>
+                <constraint firstItem="aaa-tP-4ST" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="fOt-O3-oRP"/>
+                <constraint firstItem="aaa-tP-4ST" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vAM-x6-dlq"/>
+            </constraints>
+            <point key="canvasLocation" x="139.69465648854961" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="General/close" width="44" height="44"/>
+        <namedColor name="General/background">
+            <color red="0.94117647058823528" green="0.94509803921568625" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="General/icon">
+            <color red="0.5725490196078431" green="0.60784313725490191" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="General/title">
+            <color red="0.16862745098039217" green="0.25098039215686274" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
