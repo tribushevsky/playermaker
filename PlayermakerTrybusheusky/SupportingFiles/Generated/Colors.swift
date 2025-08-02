@@ -28,6 +28,7 @@ internal enum Colors {
     internal static let highlight = ColorAsset(name: "General/highlight")
     internal static let icon = ColorAsset(name: "General/icon")
     internal static let title = ColorAsset(name: "General/title")
+    internal static let unselected = ColorAsset(name: "General/unselected")
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

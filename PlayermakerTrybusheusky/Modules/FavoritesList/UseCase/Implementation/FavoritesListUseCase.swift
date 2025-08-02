@@ -20,4 +20,22 @@ final class FavoritesListUseCase {
 
 // MARK: - FavoritesListUseCaseProtocol
 
-extension FavoritesListUseCase: FavoritesListUseCaseProtocol {}
+extension FavoritesListUseCase: FavoritesListUseCaseProtocol {
+
+	func createDevice(device: FavoriteDeviceModel) -> Single<FavoriteDeviceModel> {
+		dependencies.storage.create(sample: device)
+	}
+
+	func updateDevice(device: FavoriteDeviceModel) -> Single<FavoriteDeviceModel> {
+		dependencies.storage.update(sample: device)
+	}
+
+	func deleteDevice(device: FavoriteDeviceModel) -> Single<Void> {
+		dependencies.storage.delete(sample: device)
+	}
+
+	func devicesList(sortCriterion: FavoriteDeviceSortCriterion) -> Observable<[FavoriteDeviceModel]> {
+		dependencies.storage.samples(sort: sortCriterion)
+	}
+
+}

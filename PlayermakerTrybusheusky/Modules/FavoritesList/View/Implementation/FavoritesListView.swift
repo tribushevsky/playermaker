@@ -14,6 +14,9 @@ final class FavoritesListView: ViewController<FavoritesListViewModel> {
 	// MARK: - Stored Views / Outlets
 
 	@IBOutlet private weak var titleLabel: UILabel!
+	@IBOutlet fileprivate weak var sortNameButton: UIButton!
+	@IBOutlet fileprivate weak var sortUUIDButton: UIButton!
+	@IBOutlet fileprivate weak var favoritesListContainerView: UIView!
 	@IBOutlet fileprivate weak var placeholderView: UIView!
 	@IBOutlet private weak var placeholderTitleLabel: UILabel!
 	@IBOutlet fileprivate weak var tableView: UITableView!
@@ -32,7 +35,9 @@ final class FavoritesListView: ViewController<FavoritesListViewModel> {
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 
-		mainButton.layer.cornerRadius = mainButton.bounds.height / 2
+		[mainButton, sortNameButton, sortUUIDButton].forEach {
+			$0?.layer.cornerRadius = ($0?.bounds.height ?? 0) / 2
+		}
 	}
 
 }
@@ -51,16 +56,22 @@ extension FavoritesListView {
 		titleLabel.text = Loc.title
 		placeholderTitleLabel.text = Loc.placeholder
 		mainButton.setTitle(Loc.mainButton, for: .normal)
+		sortNameButton.setTitle(Loc.Sort.name, for: .normal)
+		sortUUIDButton.setTitle(Loc.Sort.uuid, for: .normal)
 	}
 
 	private func setupBinding() {
 		let input = FavoritesListViewModel.Input(
 			willAppearTrigger: rx.viewWillAppear.asDriverOnErrorDoNothing(),
 			willDismissTrigger: rx.willBeingDismissed.asDriver(onErrorJustReturn: true).filter { $0 }.mapToVoid(),
-			searchDevicesTrigger: mainButton.rx.tap.asDriver()
+			searchDevicesTrigger: mainButton.rx.tap.asDriver(),
+			sortByNameTrigger: sortNameButton.rx.tap.asDriver(),
+			sortByUUIDTrigger: sortUUIDButton.rx.tap.asDriver()
 		)
+
 		let output = viewModel.transform(input: input)
 
+		output.sortMode.drive(rx.sortMode).disposed(by: disposeBag)
 		output.favorites.map { !$0.isEmpty }.drive(rx.isFavoritesVisible).disposed(by: disposeBag)
 		output.tools.drive().disposed(by: disposeBag)
 	}
@@ -71,9 +82,22 @@ extension FavoritesListView {
 
 extension Reactive where Base: FavoritesListView {
 
+	var sortMode: Binder<FavoritesListSortMode> {
+		Binder(base) { view, sortMode in
+			switch sortMode {
+			case .name:
+				view.sortNameButton.backgroundColor = Colors.General.highlight.color
+				view.sortUUIDButton.backgroundColor = Colors.General.unselected.color
+			case .uuid:
+				view.sortNameButton.backgroundColor = Colors.General.unselected.color
+				view.sortUUIDButton.backgroundColor = Colors.General.highlight.color
+			}
+		}
+	}
+
 	var isFavoritesVisible: Binder<Bool> {
 		Binder(base) { view, isFavoritesVisible in
-			view.tableView.isHidden = !isFavoritesVisible
+			view.favoritesListContainerView.isHidden = !isFavoritesVisible
 			view.placeholderView.isHidden = isFavoritesVisible
 		}
 	}

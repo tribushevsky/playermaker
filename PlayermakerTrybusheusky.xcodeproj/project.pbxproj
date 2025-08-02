@@ -107,6 +107,9 @@
 		6F8C5F982E3E41ED00476A05 /* Realm+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5F972E3E41E700476A05 /* Realm+Extensions.swift */; };
 		6F8C5F9B2E3E450700476A05 /* FavoriteDeviceSortCriterion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5F9A2E3E44F500476A05 /* FavoriteDeviceSortCriterion.swift */; };
 		6F8C5F9E2E3E46B700476A05 /* FavoriteDeviceModel+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5F9D2E3E46B400476A05 /* FavoriteDeviceModel+Realm.swift */; };
+		6F8C5FA12E3E5E7700476A05 /* FavoritesListSortMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FA02E3E5E7200476A05 /* FavoritesListSortMode.swift */; };
+		6F8C5FA32E3E605300476A05 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FA22E3E605300476A05 /* Colors.swift */; };
+		6F8C5FA52E3E631000476A05 /* FavoritesListSortMode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FA42E3E630B00476A05 /* FavoritesListSortMode+Extensions.swift */; };
 		92FB93B698F0C4872E34B26D /* Pods_PlayermakerTrybusheusky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6ECABDBD00865681ED47E3D /* Pods_PlayermakerTrybusheusky.framework */; };
 /* End PBXBuildFile section */
 
@@ -216,6 +219,9 @@
 		6F8C5F972E3E41E700476A05 /* Realm+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Extensions.swift"; sourceTree = "<group>"; };
 		6F8C5F9A2E3E44F500476A05 /* FavoriteDeviceSortCriterion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDeviceSortCriterion.swift; sourceTree = "<group>"; };
 		6F8C5F9D2E3E46B400476A05 /* FavoriteDeviceModel+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteDeviceModel+Realm.swift"; sourceTree = "<group>"; };
+		6F8C5FA02E3E5E7200476A05 /* FavoritesListSortMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListSortMode.swift; sourceTree = "<group>"; };
+		6F8C5FA22E3E605300476A05 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		6F8C5FA42E3E630B00476A05 /* FavoritesListSortMode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesListSortMode+Extensions.swift"; sourceTree = "<group>"; };
 		988F42D57C0C57D5C0AE27EE /* Pods-PlayermakerTrybusheusky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayermakerTrybusheusky.debug.xcconfig"; path = "Target Support Files/Pods-PlayermakerTrybusheusky/Pods-PlayermakerTrybusheusky.debug.xcconfig"; sourceTree = "<group>"; };
 		E6ECABDBD00865681ED47E3D /* Pods_PlayermakerTrybusheusky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayermakerTrybusheusky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -768,6 +774,7 @@
 		6F833F1B2E39730A00FFA71B /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				6F8C5FA22E3E605300476A05 /* Colors.swift */,
 				6F833F492E397B1F00FFA71B /* Fonts.swift */,
 				6F833F4A2E397B1F00FFA71B /* Images.swift */,
 				6F833F4B2E397B1F00FFA71B /* Localizable.swift */,
@@ -945,6 +952,7 @@
 		6F8C5F242E3CAF0700476A05 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6F8C5F9F2E3E5E6600476A05 /* Models */,
 				6F8C5F232E3CAF0700476A05 /* Implementation */,
 			);
 			path = ViewModel;
@@ -1337,9 +1345,18 @@
 		6F8C5F9C2E3E469D00476A05 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
+				6F8C5FA42E3E630B00476A05 /* FavoritesListSortMode+Extensions.swift */,
 				6F8C5F9D2E3E46B400476A05 /* FavoriteDeviceModel+Realm.swift */,
 			);
 			path = Adapters;
+			sourceTree = "<group>";
+		};
+		6F8C5F9F2E3E5E6600476A05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6F8C5FA02E3E5E7200476A05 /* FavoritesListSortMode.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A93FFB129B1D4E42A8C13AA3 /* Pods */ = {
@@ -1505,6 +1522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F833F4D2E397B1F00FFA71B /* Images.swift in Sources */,
+				6F8C5FA32E3E605300476A05 /* Colors.swift in Sources */,
 				6F833F4E2E397B1F00FFA71B /* Localizable.swift in Sources */,
 				6F8C5F742E3E09AF00476A05 /* EditDeviceView.swift in Sources */,
 				6F8C5F752E3E09AF00476A05 /* EditDeviceUseCase.swift in Sources */,
@@ -1565,6 +1583,7 @@
 				6F8C5F9E2E3E46B700476A05 /* FavoriteDeviceModel+Realm.swift in Sources */,
 				6F8C5F942E3E3F1B00476A05 /* RealmFavoriteDeviceModel.swift in Sources */,
 				6F833F2B2E3975FC00FFA71B /* ServiceDependencyResolverProtocol.swift in Sources */,
+				6F8C5FA52E3E631000476A05 /* FavoritesListSortMode+Extensions.swift in Sources */,
 				6F0822F72E3A09900009A95E /* ViewController.swift in Sources */,
 				6F833F102E396E7300FFA71B /* NavigationDependencyResolverAssembly.swift in Sources */,
 				6F833F0C2E396A2D00FFA71B /* NavigationDependencyResolverProtocol.swift in Sources */,
@@ -1585,6 +1604,7 @@
 				6F8C5F2D2E3CAF0700476A05 /* FavoritesListDependencies.swift in Sources */,
 				6F8C5F2E2E3CAF0700476A05 /* FavoritesListViewModel.swift in Sources */,
 				6F8C5F2F2E3CAF0700476A05 /* FavoritesListContextProtocol.swift in Sources */,
+				6F8C5FA12E3E5E7700476A05 /* FavoritesListSortMode.swift in Sources */,
 				6F8C5F302E3CAF0700476A05 /* FavoritesListNavigator.swift in Sources */,
 				6F833F062E39694700FFA71B /* AppAssembly.swift in Sources */,
 				6F0822E02E39FF1E0009A95E /* ViewModelType.swift in Sources */,

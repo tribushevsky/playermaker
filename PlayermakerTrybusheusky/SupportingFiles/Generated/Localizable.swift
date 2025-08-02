@@ -17,6 +17,12 @@ internal enum L10n {
     internal static let placeholder = L10n.tr("Localizable", "favorites_list.placeholder", fallback: "Not found")
     /// Favorite Devices
     internal static let title = L10n.tr("Localizable", "favorites_list.title", fallback: "Favorite Devices")
+    internal enum Sort {
+      /// Name
+      internal static let name = L10n.tr("Localizable", "favorites_list.sort.name", fallback: "Name")
+      /// UUID
+      internal static let uuid = L10n.tr("Localizable", "favorites_list.sort.uuid", fallback: "UUID")
+    }
   }
   internal enum Identity {
     /// Localizable.strings
