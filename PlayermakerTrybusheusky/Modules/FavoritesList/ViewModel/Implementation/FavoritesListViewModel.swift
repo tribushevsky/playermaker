@@ -22,7 +22,7 @@ final class FavoritesListViewModel: ViewModelType {
 	}
 	struct Output {
 		let sortMode: Driver<FavoritesListSortMode>
-		let favorites: Driver<[String]>
+		let favorites: Driver<[FavoriteListItemViewModel]>
 		let tools: Driver<Void>
 	}
 	
@@ -98,12 +98,19 @@ extension FavoritesListViewModel {
 		.distinctUntilChanged()
 	}
 
-	func handleFavorites(with sortMode: Driver<FavoritesListSortMode>) -> Driver<[String]> {
+	func handleFavorites(with sortMode: Driver<FavoritesListSortMode>) -> Driver<[FavoriteListItemViewModel]> {
 		sortMode.flatMapLatest { [unowned self] in
 			useCase
 				.devicesList(sortCriterion: $0.sortCriterion)
 				.asDriver(onErrorJustReturn: [])
-				.map { $0.map { $0.uuid } }
+				.map { devices in
+					devices.map {
+						FavoriteListItemViewModel(
+							title: $0.name,
+							subtitle: $0.uuid
+						)
+					}
+				}
 		}
 	}
 

@@ -1,4 +1,5 @@
 PODS:
+  - Differentiator (5.0.0)
   - Realm (10.32.3):
     - Realm/Headers (= 10.32.3)
   - Realm/Headers (10.32.3)
@@ -7,6 +8,10 @@ PODS:
   - RxCocoa (6.9.0):
     - RxRelay (= 6.9.0)
     - RxSwift (= 6.9.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.1)
+    - RxSwift (~> 6.1)
   - RxRealm (5.0.4):
     - Realm (~> 10.21)
     - RealmSwift (~> 10.21)
@@ -22,6 +27,7 @@ PODS:
 DEPENDENCIES:
   - RealmSwift (~> 10.32.3)
   - RxCocoa (= 6.9.0)
+  - RxDataSources (from `https://github.com/tribushevsky/RxDataSources.git`, branch `main`)
   - RxRealm (~> 5.0.4)
   - RxSwift (= 6.9.0)
   - SnapKit (~> 5.7.1)
@@ -30,6 +36,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Differentiator
     - Realm
     - RealmSwift
     - RxCocoa
@@ -40,10 +47,22 @@ SPEC REPOS:
     - SwiftGen
     - Swinject
 
+EXTERNAL SOURCES:
+  RxDataSources:
+    :branch: main
+    :git: https://github.com/tribushevsky/RxDataSources.git
+
+CHECKOUT OPTIONS:
+  RxDataSources:
+    :commit: b303632ba34c962f0bba78d40c4ca0185c8ef472
+    :git: https://github.com/tribushevsky/RxDataSources.git
+
 SPEC CHECKSUMS:
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   Realm: fdf6732924dc5e69e30e0db2c11e869f92b53f3d
   RealmSwift: 7c181da8fa1c2fe613656a77c198d6a3dc3879a1
   RxCocoa: ac16414696ae706516be3e1ab00fcce5bdc9be8a
+  RxDataSources: 265394c752ae88e1eb3ac41908061114244fbad7
   RxRealm: 666c8785327fe2fff972a3093b35dc7055c1ca38
   RxRelay: 6b0c930e5cef57d5fe2032571e5e65b78e3cbdb1
   RxSwift: 31649ace6aceeb422e16ff71c60804f9c3281ed9
@@ -51,6 +70,6 @@ SPEC CHECKSUMS:
   SwiftGen: 4993cbf71cbc4886f775e26f8d5c3a1188ec9f99
   Swinject: a827d508c6270da03ec74e558e728917a888fa9b
 
-PODFILE CHECKSUM: cf9cb156a716bc3b68c18a19fd245b21dcad27fa
+PODFILE CHECKSUM: a0cf409bd59c4ab268d5af04066293e2ecf7f91e
 
 COCOAPODS: 1.16.2

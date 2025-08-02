@@ -110,6 +110,12 @@
 		6F8C5FA12E3E5E7700476A05 /* FavoritesListSortMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FA02E3E5E7200476A05 /* FavoritesListSortMode.swift */; };
 		6F8C5FA32E3E605300476A05 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FA22E3E605300476A05 /* Colors.swift */; };
 		6F8C5FA52E3E631000476A05 /* FavoritesListSortMode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FA42E3E630B00476A05 /* FavoritesListSortMode+Extensions.swift */; };
+		6F8C5FA82E3E663C00476A05 /* FavoriteListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FA72E3E663000476A05 /* FavoriteListItemCell.swift */; };
+		6F8C5FAA2E3E66F400476A05 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FA92E3E66F200476A05 /* Reusable.swift */; };
+		6F8C5FAD2E3E672400476A05 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FAC2E3E672100476A05 /* TableViewCell.swift */; };
+		6F8C5FB02E3E680300476A05 /* FavoriteListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FAF2E3E67FF00476A05 /* FavoriteListItemViewModel.swift */; };
+		6F8C5FB32E3E6E8C00476A05 /* FavoriteListItemSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FB22E3E6E8300476A05 /* FavoriteListItemSection.swift */; };
+		6F8C5FB52E3E73F400476A05 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FB42E3E73EF00476A05 /* GradientView.swift */; };
 		92FB93B698F0C4872E34B26D /* Pods_PlayermakerTrybusheusky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6ECABDBD00865681ED47E3D /* Pods_PlayermakerTrybusheusky.framework */; };
 /* End PBXBuildFile section */
 
@@ -222,6 +228,12 @@
 		6F8C5FA02E3E5E7200476A05 /* FavoritesListSortMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListSortMode.swift; sourceTree = "<group>"; };
 		6F8C5FA22E3E605300476A05 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		6F8C5FA42E3E630B00476A05 /* FavoritesListSortMode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesListSortMode+Extensions.swift"; sourceTree = "<group>"; };
+		6F8C5FA72E3E663000476A05 /* FavoriteListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListItemCell.swift; sourceTree = "<group>"; };
+		6F8C5FA92E3E66F200476A05 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		6F8C5FAC2E3E672100476A05 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		6F8C5FAF2E3E67FF00476A05 /* FavoriteListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListItemViewModel.swift; sourceTree = "<group>"; };
+		6F8C5FB22E3E6E8300476A05 /* FavoriteListItemSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListItemSection.swift; sourceTree = "<group>"; };
+		6F8C5FB42E3E73EF00476A05 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		988F42D57C0C57D5C0AE27EE /* Pods-PlayermakerTrybusheusky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayermakerTrybusheusky.debug.xcconfig"; path = "Target Support Files/Pods-PlayermakerTrybusheusky/Pods-PlayermakerTrybusheusky.debug.xcconfig"; sourceTree = "<group>"; };
 		E6ECABDBD00865681ED47E3D /* Pods_PlayermakerTrybusheusky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayermakerTrybusheusky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -262,6 +274,8 @@
 		6F08228A2E3982110009A95E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				6F8C5FAE2E3E673400476A05 /* Common */,
+				6F8C5FB42E3E73EF00476A05 /* GradientView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -936,6 +950,7 @@
 		6F8C5F212E3CAF0700476A05 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6F8C5FA62E3E662900476A05 /* Views */,
 				6F8C5F202E3CAF0700476A05 /* Implementation */,
 			);
 			path = View;
@@ -1359,6 +1374,33 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		6F8C5FA62E3E662900476A05 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F8C5FB12E3E6E7A00476A05 /* FavoriteListItem */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6F8C5FAE2E3E673400476A05 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6F8C5FAC2E3E672100476A05 /* TableViewCell.swift */,
+				6F8C5FA92E3E66F200476A05 /* Reusable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6F8C5FB12E3E6E7A00476A05 /* FavoriteListItem */ = {
+			isa = PBXGroup;
+			children = (
+				6F8C5FA72E3E663000476A05 /* FavoriteListItemCell.swift */,
+				6F8C5FAF2E3E67FF00476A05 /* FavoriteListItemViewModel.swift */,
+				6F8C5FB22E3E6E8300476A05 /* FavoriteListItemSection.swift */,
+			);
+			path = FavoriteListItem;
+			sourceTree = "<group>";
+		};
 		A93FFB129B1D4E42A8C13AA3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1538,10 +1580,12 @@
 				6F0822C62E3982CC0009A95E /* RootUseCaseProtocol.swift in Sources */,
 				6F8C5F4D2E3D20EE00476A05 /* SearchDevicesDependenciesProtocol.swift in Sources */,
 				6F8C5F4E2E3D20EE00476A05 /* SearchDevicesNavigatorProtocol.swift in Sources */,
+				6F8C5FB02E3E680300476A05 /* FavoriteListItemViewModel.swift in Sources */,
 				6F8C5F4F2E3D20EE00476A05 /* SearchDevicesNavigator.swift in Sources */,
 				6F8C5F502E3D20EE00476A05 /* SearchDevicesView.swift in Sources */,
 				6F8C5F982E3E41ED00476A05 /* Realm+Extensions.swift in Sources */,
 				6F8C5F512E3D20EE00476A05 /* SearchDevicesViewModel.swift in Sources */,
+				6F8C5FAD2E3E672400476A05 /* TableViewCell.swift in Sources */,
 				6F8C5F522E3D20EE00476A05 /* SearchDevicesUseCaseProtocol.swift in Sources */,
 				6F8C5F532E3D20EE00476A05 /* SearchDevicesContextProtocol.swift in Sources */,
 				6F8C5F542E3D20EE00476A05 /* SearchDevicesDependencies.swift in Sources */,
@@ -1562,6 +1606,7 @@
 				6F0822CF2E3982CC0009A95E /* LaunchView.swift in Sources */,
 				6F0822D02E3982CC0009A95E /* LaunchUseCaseProtocol.swift in Sources */,
 				6F8C5F8A2E3E384D00476A05 /* RealmLocalStorageService.swift in Sources */,
+				6F8C5FA82E3E663C00476A05 /* FavoriteListItemCell.swift in Sources */,
 				6F0822D12E3982CC0009A95E /* RootViewModel.swift in Sources */,
 				6F0822D22E3982CC0009A95E /* RootUseCaseAnalyticsEvent.swift in Sources */,
 				6F0822D32E3982CC0009A95E /* LaunchContextProtocol.swift in Sources */,
@@ -1584,6 +1629,7 @@
 				6F8C5F942E3E3F1B00476A05 /* RealmFavoriteDeviceModel.swift in Sources */,
 				6F833F2B2E3975FC00FFA71B /* ServiceDependencyResolverProtocol.swift in Sources */,
 				6F8C5FA52E3E631000476A05 /* FavoritesListSortMode+Extensions.swift in Sources */,
+				6F8C5FAA2E3E66F400476A05 /* Reusable.swift in Sources */,
 				6F0822F72E3A09900009A95E /* ViewController.swift in Sources */,
 				6F833F102E396E7300FFA71B /* NavigationDependencyResolverAssembly.swift in Sources */,
 				6F833F0C2E396A2D00FFA71B /* NavigationDependencyResolverProtocol.swift in Sources */,
@@ -1596,6 +1642,7 @@
 				6F833F0E2E396DB500FFA71B /* NavigationDependencyResolver.swift in Sources */,
 				6F833F182E396F6900FFA71B /* NavigationDependencyResolverAssembly+Main.swift in Sources */,
 				6F8C5F272E3CAF0700476A05 /* FavoritesListView.swift in Sources */,
+				6F8C5FB52E3E73F400476A05 /* GradientView.swift in Sources */,
 				6F8C5F282E3CAF0700476A05 /* FavoritesListDependenciesProtocol.swift in Sources */,
 				6F8C5F292E3CAF0700476A05 /* FavoritesListUseCaseProtocol.swift in Sources */,
 				6F8C5F2A2E3CAF0700476A05 /* FavoritesListNavigatorProtocol.swift in Sources */,
@@ -1605,6 +1652,7 @@
 				6F8C5F2E2E3CAF0700476A05 /* FavoritesListViewModel.swift in Sources */,
 				6F8C5F2F2E3CAF0700476A05 /* FavoritesListContextProtocol.swift in Sources */,
 				6F8C5FA12E3E5E7700476A05 /* FavoritesListSortMode.swift in Sources */,
+				6F8C5FB32E3E6E8C00476A05 /* FavoriteListItemSection.swift in Sources */,
 				6F8C5F302E3CAF0700476A05 /* FavoritesListNavigator.swift in Sources */,
 				6F833F062E39694700FFA71B /* AppAssembly.swift in Sources */,
 				6F0822E02E39FF1E0009A95E /* ViewModelType.swift in Sources */,

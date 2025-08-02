@@ -10,6 +10,7 @@ target 'PlayermakerTrybusheusky' do
 	pod 'Swinject', '~> 2.8'
 	pod 'RealmSwift', '~> 10.32.3'
 	pod 'RxRealm', '~> 5.0.4'
+	pod 'RxDataSources', :git => 'https://github.com/tribushevsky/RxDataSources.git', :branch => 'main'
 
 end
 

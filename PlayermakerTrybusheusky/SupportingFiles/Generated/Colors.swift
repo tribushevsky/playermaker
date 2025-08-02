@@ -27,6 +27,8 @@ internal enum Colors {
     internal static let background = ColorAsset(name: "General/background")
     internal static let highlight = ColorAsset(name: "General/highlight")
     internal static let icon = ColorAsset(name: "General/icon")
+    internal static let itemBackground = ColorAsset(name: "General/item_background")
+    internal static let subtitle = ColorAsset(name: "General/subtitle")
     internal static let title = ColorAsset(name: "General/title")
     internal static let unselected = ColorAsset(name: "General/unselected")
   }

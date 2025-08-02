@@ -11,7 +11,7 @@ import RxCocoa
 
 final class SearchDevicesView: ViewController<SearchDevicesViewModel> {
 
-	// MARK: - Stored Views / Outlets
+	// MARK: - Stored Properties / Outlets
 
 	@IBOutlet private weak var titleLabel: UILabel!
 	@IBOutlet private weak var closeButton: UIButton!

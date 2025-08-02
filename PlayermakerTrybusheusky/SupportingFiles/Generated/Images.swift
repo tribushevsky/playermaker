@@ -23,6 +23,8 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Images {
   internal enum Favorites {
+    internal static let delete = ImageAsset(name: "Favorites/delete")
+    internal static let edit = ImageAsset(name: "Favorites/edit")
     internal static let empty = ImageAsset(name: "Favorites/empty")
   }
   internal enum General {
