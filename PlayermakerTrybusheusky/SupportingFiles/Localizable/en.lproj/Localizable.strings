@@ -7,5 +7,7 @@
 */
 
 "identity.developer_name" = "Vladimir Tribushevsky";
+"favorites_list.title" = "Favorite Devices";
+"favorites_list.placeholder" = "Not found";
 "favorites_list.main_button" = "Add New Devices";
-"search_devices.title" = "Search Devices...";
+"search_devices.title.search" = "Search Devices...";

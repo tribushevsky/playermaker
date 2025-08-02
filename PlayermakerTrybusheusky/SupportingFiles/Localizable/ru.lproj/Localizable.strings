@@ -7,4 +7,7 @@
 */
 
 "identity.developer_name" = "Владимир Трибушевский";
+"favorites_list.title" = "Избранные устройства";
+"favorites_list.placeholder" = "Не найдены";
 "favorites_list.main_button" = "Добавить Новый Девайс";
+"search_devices.title" = "Поиск Девайсов...";

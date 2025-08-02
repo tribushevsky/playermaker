@@ -7,4 +7,7 @@
 */
 
 "identity.developer_name" = "Уладзімір Трыбушэўскі";
+"favorites_list.title" = "Выбраныя прылады";
+"favorites_list.placeholder" = "Не знойдзены";
 "favorites_list.main_button" = "Дадаць Новы Дэвайс";
+"search_devices.title" = "Пошук Прылад...";

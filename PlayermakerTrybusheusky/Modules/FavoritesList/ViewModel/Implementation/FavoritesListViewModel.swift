@@ -19,6 +19,7 @@ final class FavoritesListViewModel: ViewModelType {
 		let searchDevicesTrigger: Driver<Void>
 	}
 	struct Output {
+		let favorites: Driver<[String]>
 		let tools: Driver<Void>
 	}
 	
@@ -50,6 +51,7 @@ extension FavoritesListViewModel {
 		).take(until: input.willDismissTrigger.take(1).asObservable())
 
 		return Output(
+			favorites: handleFavorites(),
 			tools: tools
 		)
 	}
@@ -66,6 +68,10 @@ extension FavoritesListViewModel {
 				.routeToSearchDevices()
 				.asDriverOnErrorDoNothing()
 		}
+	}
+
+	func handleFavorites() -> Driver<[String]> {
+		Driver.just([])
 	}
 
 }

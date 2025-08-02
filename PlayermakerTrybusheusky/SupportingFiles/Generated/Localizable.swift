@@ -13,6 +13,10 @@ internal enum L10n {
   internal enum FavoritesList {
     /// Add New Devices
     internal static let mainButton = L10n.tr("Localizable", "favorites_list.main_button", fallback: "Add New Devices")
+    /// Not found
+    internal static let placeholder = L10n.tr("Localizable", "favorites_list.placeholder", fallback: "Not found")
+    /// Favorite Devices
+    internal static let title = L10n.tr("Localizable", "favorites_list.title", fallback: "Favorite Devices")
   }
   internal enum Identity {
     /// Localizable.strings

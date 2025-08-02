@@ -13,7 +13,10 @@ final class FavoritesListView: ViewController<FavoritesListViewModel> {
 
 	// MARK: - Stored Views / Outlets
 
-	@IBOutlet private weak var tableView: UITableView!
+	@IBOutlet private weak var titleLabel: UILabel!
+	@IBOutlet fileprivate weak var placeholderView: UIView!
+	@IBOutlet private weak var placeholderTitleLabel: UILabel!
+	@IBOutlet fileprivate weak var tableView: UITableView!
 	@IBOutlet private weak var mainButton: UIButton!
 
 	// MARK: - Lifecycle
@@ -43,10 +46,11 @@ extension FavoritesListView {
 	}
 
 	private func localize() {
-		mainButton.setTitle(
-			L10n.FavoritesList.mainButton,
-			for: .normal
-		)
+		typealias Loc = L10n.FavoritesList
+
+		titleLabel.text = Loc.title
+		placeholderTitleLabel.text = Loc.placeholder
+		mainButton.setTitle(Loc.mainButton, for: .normal)
 	}
 
 	private func setupBinding() {
@@ -56,6 +60,8 @@ extension FavoritesListView {
 			searchDevicesTrigger: mainButton.rx.tap.asDriver()
 		)
 		let output = viewModel.transform(input: input)
+
+		output.favorites.map { !$0.isEmpty }.drive(rx.isFavoritesVisible).disposed(by: disposeBag)
 		output.tools.drive().disposed(by: disposeBag)
 	}
 
@@ -64,5 +70,12 @@ extension FavoritesListView {
 // MARK: - Reactive
 
 extension Reactive where Base: FavoritesListView {
+
+	var isFavoritesVisible: Binder<Bool> {
+		Binder(base) { view, isFavoritesVisible in
+			view.tableView.isHidden = !isFavoritesVisible
+			view.placeholderView.isHidden = isFavoritesVisible
+		}
+	}
 
 }
