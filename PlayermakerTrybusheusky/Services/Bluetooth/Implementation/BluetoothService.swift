@@ -84,7 +84,10 @@ extension BluetoothService: BluetoothServiceProtocol {
 		discoveryHandler = nil
 		discoveredPeripherals.removeAll()
 		syncDataService.isScanning = false
-		centralManager.stopScan()
+
+		if centralManager.state == .poweredOn {
+			centralManager.stopScan()
+		}
 	}
 
 }

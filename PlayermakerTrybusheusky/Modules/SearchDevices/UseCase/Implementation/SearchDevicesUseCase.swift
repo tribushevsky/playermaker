@@ -43,4 +43,12 @@ extension SearchDevicesUseCase: SearchDevicesUseCaseProtocol {
 		}
 	}
 
+	func deleteFavoriteDevice(device: FavoriteDeviceModel) -> Single<Void> {
+		dependencies.storage.delete(sample: device)
+	}
+
+	func createFavoriteDevice(device: FavoriteDeviceModel) -> Single<FavoriteDeviceModel> {
+		dependencies.storage.create(sample: device)
+	}
+
 }

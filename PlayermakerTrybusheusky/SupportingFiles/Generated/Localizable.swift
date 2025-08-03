@@ -57,6 +57,14 @@ internal enum L10n {
         internal static let unauthorized = L10n.tr("Localizable", "error.bluetooth.title.unauthorized", fallback: "Bluetooth permissions not granted")
       }
     }
+    internal enum SearchDevices {
+      internal enum NotFound {
+        /// Please, try one more time
+        internal static let message = L10n.tr("Localizable", "error.search_devices.not_found.message", fallback: "Please, try one more time")
+        /// Device not found
+        internal static let title = L10n.tr("Localizable", "error.search_devices.not_found.title", fallback: "Device not found")
+      }
+    }
     internal enum SomethingWentWrong {
       internal enum TryLater {
         /// Please, try later!

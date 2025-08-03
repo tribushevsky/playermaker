@@ -28,6 +28,9 @@
 "device_info.name_title" = "Name:";
 "device_info.save" = "Save";
 
+"error.search_devices.not_found.title" = "Device not found";
+"error.search_devices.not_found.message" = "Please, try one more time";
+
 "error.something_went_wrong.try_later.title" = "Something went wrong";
 "error.something_went_wrong.try_later.message" = "Please, try later!";
 

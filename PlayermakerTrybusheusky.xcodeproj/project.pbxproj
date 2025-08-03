@@ -129,6 +129,7 @@
 		6F8C5FDE2E3F92B900476A05 /* BluetoothServiceError+NavigationCatcherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FDD2E3F92B700476A05 /* BluetoothServiceError+NavigationCatcherError.swift */; };
 		6F8C5FE02E3F9D9700476A05 /* SearchDevicesItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FDF2E3F9D9200476A05 /* SearchDevicesItemCell.swift */; };
 		6F8C5FE22E3FA20100476A05 /* SearchDevicesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FE12E3FA1FD00476A05 /* SearchDevicesSection.swift */; };
+		6F8C5FE52E3FB2F900476A05 /* SearchDevicesViewModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FE42E3FB2F700476A05 /* SearchDevicesViewModelError.swift */; };
 		92FB93B698F0C4872E34B26D /* Pods_PlayermakerTrybusheusky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6ECABDBD00865681ED47E3D /* Pods_PlayermakerTrybusheusky.framework */; };
 /* End PBXBuildFile section */
 
@@ -262,6 +263,7 @@
 		6F8C5FDD2E3F92B700476A05 /* BluetoothServiceError+NavigationCatcherError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BluetoothServiceError+NavigationCatcherError.swift"; sourceTree = "<group>"; };
 		6F8C5FDF2E3F9D9200476A05 /* SearchDevicesItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDevicesItemCell.swift; sourceTree = "<group>"; };
 		6F8C5FE12E3FA1FD00476A05 /* SearchDevicesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDevicesSection.swift; sourceTree = "<group>"; };
+		6F8C5FE42E3FB2F700476A05 /* SearchDevicesViewModelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDevicesViewModelError.swift; sourceTree = "<group>"; };
 		988F42D57C0C57D5C0AE27EE /* Pods-PlayermakerTrybusheusky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayermakerTrybusheusky.debug.xcconfig"; path = "Target Support Files/Pods-PlayermakerTrybusheusky/Pods-PlayermakerTrybusheusky.debug.xcconfig"; sourceTree = "<group>"; };
 		E6ECABDBD00865681ED47E3D /* Pods_PlayermakerTrybusheusky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayermakerTrybusheusky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1150,6 +1152,7 @@
 		6F8C5F4B2E3D20EE00476A05 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6F8C5FE32E3FB2F000476A05 /* Tools */,
 				6F8C5F4A2E3D20EE00476A05 /* Implementation */,
 			);
 			path = ViewModel;
@@ -1498,6 +1501,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		6F8C5FE32E3FB2F000476A05 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				6F8C5FE42E3FB2F700476A05 /* SearchDevicesViewModelError.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		A93FFB129B1D4E42A8C13AA3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1678,6 +1689,7 @@
 				6F8C5F7D2E3E09AF00476A05 /* EditDeviceUseCaseProtocol.swift in Sources */,
 				6F8C5F072E3C152A00476A05 /* Window.swift in Sources */,
 				6F8C5FD02E3EB87E00476A05 /* BluetoothService.swift in Sources */,
+				6F8C5FE52E3FB2F900476A05 /* SearchDevicesViewModelError.swift in Sources */,
 				6F0822C62E3982CC0009A95E /* RootUseCaseProtocol.swift in Sources */,
 				6F8C5F4D2E3D20EE00476A05 /* SearchDevicesDependenciesProtocol.swift in Sources */,
 				6F8C5F4E2E3D20EE00476A05 /* SearchDevicesNavigatorProtocol.swift in Sources */,

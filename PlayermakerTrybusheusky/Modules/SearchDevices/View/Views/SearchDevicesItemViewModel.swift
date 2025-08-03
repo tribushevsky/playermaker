@@ -7,6 +7,7 @@
 
 struct SearchDevicesItemViewModel {
 
+	let uuid: String
 	let title: String
 	let subtitle: String
 	let isFavorite: Bool
