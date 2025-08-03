@@ -16,7 +16,11 @@ struct SearchDevicesSection {
 
 }
 
-extension SearchDevicesSection: SectionModelType {
+extension SearchDevicesSection: AnimatableSectionModelType {
+
+	var identity: some Hashable {
+		""
+	}
 
 	init(original: SearchDevicesSection, items: [SearchDevicesItemViewModel]) {
 		self = original

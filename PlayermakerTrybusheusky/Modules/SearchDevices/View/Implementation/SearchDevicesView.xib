@@ -12,6 +12,9 @@
         <array key="Nunito-Bold.ttf">
             <string>Nunito-Bold</string>
         </array>
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchDevicesView" customModule="PlayermakerTrybusheusky" customModuleProvider="target">
@@ -20,6 +23,8 @@
                 <outlet property="contentPlaceholderView" destination="P2K-rD-KFk" id="0sA-VB-QXZ"/>
                 <outlet property="devicesListContainerView" destination="zu9-Xo-Y6w" id="XC7-Ur-c8V"/>
                 <outlet property="devicesTableView" destination="7hJ-yJ-NG8" id="yuQ-dc-VI7"/>
+                <outlet property="sortByNameButton" destination="Pn6-ze-sop" id="rd1-AC-42c"/>
+                <outlet property="sortByRSSIButton" destination="iL8-ut-UKB" id="QiO-HS-C9m"/>
                 <outlet property="titleLabel" destination="dn8-l3-Mfw" id="DLT-nw-THn"/>
                 <outlet property="view" destination="iN0-l3-epB" id="U8i-YK-e00"/>
             </connections>
@@ -69,17 +74,58 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zu9-Xo-Y6w">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="727"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xm-Ax-TwF">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="45"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="sit-qb-d02">
+                                                    <rect key="frame" x="16" y="0.0" width="361" height="45"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pn6-ze-sop">
+                                                            <rect key="frame" x="0.0" y="0.0" width="177.66666666666666" height="45"/>
+                                                            <color key="backgroundColor" name="General/highlight"/>
+                                                            <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="_Name">
+                                                                <color key="titleColor" name="General/accent_light"/>
+                                                            </state>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iL8-ut-UKB">
+                                                            <rect key="frame" x="183.66666666666663" y="0.0" width="177.33333333333337" height="45"/>
+                                                            <color key="backgroundColor" name="General/unselected"/>
+                                                            <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="18"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="_RSSI">
+                                                                <color key="titleColor" name="General/accent_light"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="Hol-Sk-kFF"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="sit-qb-d02" firstAttribute="leading" secondItem="0xm-Ax-TwF" secondAttribute="leading" constant="16" id="HgN-7g-Od9"/>
+                                                <constraint firstItem="sit-qb-d02" firstAttribute="top" secondItem="0xm-Ax-TwF" secondAttribute="top" id="Lm5-St-1py"/>
+                                                <constraint firstAttribute="bottom" secondItem="sit-qb-d02" secondAttribute="bottom" id="bRv-qx-3yr"/>
+                                                <constraint firstAttribute="trailing" secondItem="sit-qb-d02" secondAttribute="trailing" constant="16" id="sgw-5r-glY"/>
+                                            </constraints>
+                                        </view>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="73" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7hJ-yJ-NG8">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="727"/>
+                                            <rect key="frame" x="0.0" y="51" width="393" height="676"/>
                                             <color key="backgroundColor" name="General/background"/>
                                             <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableView>
                                     </subviews>
                                     <color key="backgroundColor" name="General/background"/>
                                     <constraints>
+                                        <constraint firstItem="0xm-Ax-TwF" firstAttribute="leading" secondItem="zu9-Xo-Y6w" secondAttribute="leading" id="2i0-rH-wfm"/>
+                                        <constraint firstAttribute="trailing" secondItem="0xm-Ax-TwF" secondAttribute="trailing" id="5lr-hG-5lD"/>
                                         <constraint firstItem="7hJ-yJ-NG8" firstAttribute="leading" secondItem="zu9-Xo-Y6w" secondAttribute="leading" id="Dcf-t0-aJa"/>
-                                        <constraint firstItem="7hJ-yJ-NG8" firstAttribute="top" secondItem="zu9-Xo-Y6w" secondAttribute="top" id="Fba-Bf-yDQ"/>
+                                        <constraint firstItem="7hJ-yJ-NG8" firstAttribute="top" secondItem="0xm-Ax-TwF" secondAttribute="bottom" constant="6" id="NNF-qP-bvN"/>
                                         <constraint firstAttribute="bottom" secondItem="7hJ-yJ-NG8" secondAttribute="bottom" id="Ofs-kP-qoU"/>
+                                        <constraint firstItem="0xm-Ax-TwF" firstAttribute="top" secondItem="zu9-Xo-Y6w" secondAttribute="top" id="WNQ-wB-g0Y"/>
                                         <constraint firstAttribute="trailing" secondItem="7hJ-yJ-NG8" secondAttribute="trailing" id="gRa-ka-2Za"/>
                                     </constraints>
                                 </view>
@@ -126,14 +172,23 @@
     </objects>
     <resources>
         <image name="General/close" width="44" height="44"/>
+        <namedColor name="General/accent_light">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="General/background">
             <color red="0.94117647058823528" green="0.94509803921568625" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="General/highlight">
+            <color red="0.50980392156862742" green="0.27450980392156865" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="General/icon">
             <color red="0.5725490196078431" green="0.60784313725490191" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="General/title">
             <color red="0.16862745098039217" green="0.25098039215686274" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="General/unselected">
+            <color red="0.59215686274509804" green="0.62352941176470589" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

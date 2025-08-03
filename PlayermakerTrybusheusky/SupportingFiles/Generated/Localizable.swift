@@ -43,8 +43,8 @@ internal enum L10n {
       internal enum Message {
         /// Please, try later!
         internal static let general = L10n.tr("Localizable", "error.bluetooth.message.general", fallback: "Please, try later!")
-        /// Turn on Bluetooth in the Settings/Bluetooth
-        internal static let turnedOff = L10n.tr("Localizable", "error.bluetooth.message.turned_off", fallback: "Turn on Bluetooth in the Settings/Bluetooth")
+        /// Turn on Bluetooth in the Settings > Bluetooth
+        internal static let turnedOff = L10n.tr("Localizable", "error.bluetooth.message.turned_off", fallback: "Turn on Bluetooth in the Settings > Bluetooth")
         /// Allow Bluetooth access in the PlayermakerTrybusheusky app's settings
         internal static let unauthorized = L10n.tr("Localizable", "error.bluetooth.message.unauthorized", fallback: "Allow Bluetooth access in the PlayermakerTrybusheusky app's settings")
       }
@@ -59,16 +59,16 @@ internal enum L10n {
     }
     internal enum SearchDevices {
       internal enum NotFound {
-        /// Please, try one more time
-        internal static let message = L10n.tr("Localizable", "error.search_devices.not_found.message", fallback: "Please, try one more time")
+        /// Please try one more time
+        internal static let message = L10n.tr("Localizable", "error.search_devices.not_found.message", fallback: "Please try one more time")
         /// Device not found
         internal static let title = L10n.tr("Localizable", "error.search_devices.not_found.title", fallback: "Device not found")
       }
     }
     internal enum SomethingWentWrong {
       internal enum TryLater {
-        /// Please, try later!
-        internal static let message = L10n.tr("Localizable", "error.something_went_wrong.try_later.message", fallback: "Please, try later!")
+        /// Please try later!
+        internal static let message = L10n.tr("Localizable", "error.something_went_wrong.try_later.message", fallback: "Please try later!")
         /// Something went wrong
         internal static let title = L10n.tr("Localizable", "error.something_went_wrong.try_later.title", fallback: "Something went wrong")
       }
@@ -107,6 +107,12 @@ internal enum L10n {
       internal static let rssiTitle = L10n.tr("Localizable", "search_devices.item.rssi_title", fallback: "RSSI")
       /// Unknown Name
       internal static let unknownName = L10n.tr("Localizable", "search_devices.item.unknown_name", fallback: "Unknown Name")
+    }
+    internal enum Sort {
+      /// Name
+      internal static let name = L10n.tr("Localizable", "search_devices.sort.name", fallback: "Name")
+      /// RSSI
+      internal static let rssi = L10n.tr("Localizable", "search_devices.sort.rssi", fallback: "RSSI")
     }
   }
 }

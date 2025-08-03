@@ -16,10 +16,13 @@ final class SearchDevicesViewModel: ViewModelType, CrucialActionHandableProtocol
 	struct Input {
 		let didAppearTrigger: Driver<Void>
 		let willDismissTrigger: Driver<Void>
+		let sortByNameTrigger: Driver<Void>
+		let sortByRSSITrigger: Driver<Void>
 		let closeTrigger: Driver<Void>
 		let toggleFavoriteTrigger: Driver<SearchDevicesItemViewModel>
 	}
 	struct Output {
+		let sortMode: Driver<SearchDevicesSortMode>
 		let devices: Driver<[SearchDevicesItemViewModel]>
 		let tools: Driver<Void>
 	}
@@ -47,9 +50,15 @@ final class SearchDevicesViewModel: ViewModelType, CrucialActionHandableProtocol
 extension SearchDevicesViewModel {
 
 	func transform(input: Input) -> Output {
+		let sortMode = handleFavoritesSortMode(
+			sortByNameTrigger: input.sortByNameTrigger.throttle(.microseconds(300)),
+			sortByRSSITrigger: input.sortByRSSITrigger.throttle(.microseconds(300))
+		)
+
 		let favoriteDevices = useCase.favoriteDevices.asDriver(onErrorJustReturn: [])
 		let discoveredDevices = handleStartScanning(trigger: input.didAppearTrigger)
 		let devices = mapDevices(discoveredDevices: discoveredDevices, favoriteDevices: favoriteDevices)
+		let sortedDevices = handleSortedDevices(sortModeTrigger: sortMode, devices: devices)
 
 		let tools = Driver<Void>.merge(
 			handleClose(trigger: input.closeTrigger.throttle(.milliseconds(300))),
@@ -61,7 +70,8 @@ extension SearchDevicesViewModel {
 		).take(until: input.willDismissTrigger.take(1).asObservable())
 
 		return Output(
-			devices: devices,
+			sortMode: sortMode,
+			devices: sortedDevices,
 			tools: tools
 		)
 	}
@@ -71,6 +81,45 @@ extension SearchDevicesViewModel {
 // MARK: - Handlers
 
 extension SearchDevicesViewModel {
+
+	func handleFavoritesSortMode(
+		sortByNameTrigger: Driver<Void>,
+		sortByRSSITrigger: Driver<Void>
+	) -> Driver<SearchDevicesSortMode> {
+		Driver<SearchDevicesSortMode>.merge(
+			sortByNameTrigger.map { .name },
+			sortByRSSITrigger.map { .rssi }
+		)
+		.startWith(.name)
+		.distinctUntilChanged()
+	}
+
+	func handleSortedDevices(
+		sortModeTrigger: Driver<SearchDevicesSortMode>,
+		devices: Driver<[SearchDevicesItemViewModel]>
+	) -> Driver<[SearchDevicesItemViewModel]> {
+		Driver
+			.combineLatest(sortModeTrigger, devices)
+			.map { params in
+				params.1.sorted { (lhs: SearchDevicesItemViewModel, rhs: SearchDevicesItemViewModel) in
+					switch params.0 {
+					case .name:
+						return lhs.title < rhs.title
+					case .rssi:
+						switch (lhs.rssi, rhs.rssi) {
+						case (.some(let lhsValue), .some(let rhsValue)):
+							return lhsValue > rhsValue
+						case (.some, .none):
+							return true
+						case (.none, .some):
+							return false
+						case (.none, .none):
+							return true
+						}
+					}
+				}
+			}
+	}
 
 	func mapDevices(
 		discoveredDevices: Driver<[DiscoveredDeviceModel]>,

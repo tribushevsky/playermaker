@@ -20,6 +20,8 @@
 "favorites_list.item.unknown_name" = "Неизвестное имя";
 
 "search_devices.title" = "Поиск устройств...";
+"search_devices.sort.name" = "Имя";
+"search_devices.sort.rssi" = "RSSI";
 "search_devices.item.rssi_title" = "RSSI";
 "search_devices.item.unknown_name" = "Неизвестное имя";
 

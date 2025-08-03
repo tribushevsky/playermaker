@@ -28,8 +28,8 @@
                 <outlet property="mainButton" destination="kvR-B4-g6p" id="lA5-cb-dHr"/>
                 <outlet property="placeholderTitleLabel" destination="DZ7-dh-N4G" id="RNf-tl-Py6"/>
                 <outlet property="placeholderView" destination="JMY-n8-qG3" id="Nls-PO-Z9T"/>
-                <outlet property="sortNameButton" destination="d2K-Nk-FCh" id="YyV-QZ-W1A"/>
-                <outlet property="sortUUIDButton" destination="vpf-8z-IVh" id="rug-KY-VA5"/>
+                <outlet property="sortByNameButton" destination="d2K-Nk-FCh" id="GkA-6D-BpD"/>
+                <outlet property="sortByUUIDButton" destination="vpf-8z-IVh" id="p6J-he-AfQ"/>
                 <outlet property="titleLabel" destination="6i1-IC-ewJ" id="YuN-5Q-vpm"/>
                 <outlet property="view" destination="iN0-l3-epB" id="U8i-YK-e00"/>
             </connections>
