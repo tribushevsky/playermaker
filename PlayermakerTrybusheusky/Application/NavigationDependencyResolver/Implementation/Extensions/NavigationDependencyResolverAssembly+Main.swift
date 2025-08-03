@@ -85,7 +85,10 @@ extension NavigationDependencyResolverAssembly {
 		}.inObjectScope(.transient)
 
 		container.register(SearchDevicesDependenciesProtocol.self) { resolver in
-			SearchDevicesDependencies()
+			SearchDevicesDependencies(
+				bluetooth: resolver.resolve(BluetoothServiceProtocol.self)!,
+				storage: resolver.resolve(ReactiveLocalStorageServiceProtocol.self)!
+			)
 		}.inObjectScope(.transient)
 	}
 

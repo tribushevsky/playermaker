@@ -59,7 +59,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ytI-To-6RJ">
                             <rect key="frame" x="0.0" y="0.0" width="361" height="82.333333333333329"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Js2-Lh-KKi">
+                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Js2-Lh-KKi">
                                     <rect key="frame" x="6" y="36.333333333333343" width="349" height="40"/>
                                     <color key="backgroundColor" name="General/background"/>
                                     <constraints>

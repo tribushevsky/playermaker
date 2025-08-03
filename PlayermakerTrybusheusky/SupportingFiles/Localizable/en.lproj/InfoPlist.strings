@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  PlayermakerTrybusheusky
+
+  Created by Uladzimir Trybusheusky on 03/08/2025.
+  
+*/
+
+"NSBluetoothAlwaysUsageDescription" = "App needs Bluetooth access to find nearby devices";

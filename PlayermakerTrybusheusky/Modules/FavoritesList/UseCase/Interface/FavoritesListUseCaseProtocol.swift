@@ -9,7 +9,6 @@ import RxSwift
 
 protocol FavoritesListUseCaseProtocol {
 
-	func createDevice(device: FavoriteDeviceModel) -> Single<FavoriteDeviceModel>
 	func updateDevice(device: FavoriteDeviceModel) -> Single<FavoriteDeviceModel>
 	func deleteDevice(device: FavoriteDeviceModel) -> Single<Void>
 	func devicesList(sortCriterion: FavoriteDeviceSortCriterion) -> Observable<[FavoriteDeviceModel]>

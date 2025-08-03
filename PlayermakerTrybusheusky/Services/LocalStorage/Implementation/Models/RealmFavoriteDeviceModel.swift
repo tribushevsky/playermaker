@@ -11,7 +11,7 @@ import RealmSwift
 class RealmFavoriteDeviceModel: Object {
 
 	@objc dynamic var uuid: String
-	@objc dynamic var name: String
+	@objc dynamic var name: String?
 
 	init(model: FavoriteDeviceModel) {
 		self.uuid = model.uuid
@@ -20,7 +20,7 @@ class RealmFavoriteDeviceModel: Object {
 
 	override init() {
 		self.uuid = ""
-		self.name = ""
+		self.name = nil
 	}
 
 	override static func primaryKey() -> String? {

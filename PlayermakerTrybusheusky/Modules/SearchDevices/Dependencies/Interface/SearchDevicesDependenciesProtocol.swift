@@ -5,4 +5,9 @@
 //  Created by Uladzimir Trybusheusky on 29/07/2025.
 //
 
-protocol SearchDevicesDependenciesProtocol {}
+protocol SearchDevicesDependenciesProtocol {
+
+	var bluetooth: BluetoothServiceProtocol { get }
+	var storage: ReactiveLocalStorageServiceProtocol { get }
+
+}

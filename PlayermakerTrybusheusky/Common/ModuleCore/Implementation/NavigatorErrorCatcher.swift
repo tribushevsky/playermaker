@@ -81,12 +81,15 @@ extension ObservableType {
 
 	func asDriverCatchError<T>(catcher: NavigatorErrorCatcher<T>) -> Driver<NavigationCatcherAction> {
 		self.flatMapLatest { _ -> Observable<NavigationCatcherAction> in Observable<NavigationCatcherAction>.never() }
-		.asDriver(onErrorRecover: { error in
-			guard let navigationError = error as? NavigationCatcherError else {
-				return Driver.fatalEmpty(msg: "Error should conform NavigationCatcherError")
-			}
+			.asDriver(onErrorRecover: { [weak catcher] error in
+				guard
+					let catcher,
+					let navigationError = error as? NavigationCatcherError
+				else {
+					return Driver.fatalEmpty(msg: "Error should conform NavigationCatcherError")
+				}
 
-			return catcher.catchAlert(error: navigationError).asDriverOnErrorDoNothing()
+				return catcher.catchAlert(error: navigationError).asDriverOnErrorDoNothing()
 		})
 	}
 

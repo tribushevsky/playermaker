@@ -42,13 +42,14 @@ extension SearchDevicesView {
 
 	private func setupBinding() {
 		let input = SearchDevicesViewModel.Input(
-			willAppearTrigger: rx.viewWillAppear.asDriverOnErrorDoNothing(),
+			didAppearTrigger: rx.viewDidAppear.asDriverOnErrorDoNothing(),
 			willDismissTrigger: rx.willBeingDismissed.asDriver(onErrorJustReturn: true).filter { $0 }.mapToVoid(),
 			closeTrigger: closeButton.rx.tap.asDriver()
 		)
 
 		let output = viewModel.transform(input: input)
 
+		output.devices.drive().disposed(by: disposeBag)
 		output.tools.drive().disposed(by: disposeBag)
 	}
 

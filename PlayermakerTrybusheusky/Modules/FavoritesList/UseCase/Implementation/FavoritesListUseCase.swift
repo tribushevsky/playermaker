@@ -22,10 +22,6 @@ final class FavoritesListUseCase {
 
 extension FavoritesListUseCase: FavoritesListUseCaseProtocol {
 
-	func createDevice(device: FavoriteDeviceModel) -> Single<FavoriteDeviceModel> {
-		dependencies.storage.create(sample: device)
-	}
-
 	func updateDevice(device: FavoriteDeviceModel) -> Single<FavoriteDeviceModel> {
 		dependencies.storage.update(sample: device)
 	}

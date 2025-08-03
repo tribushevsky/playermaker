@@ -8,6 +8,6 @@
 struct FavoriteDeviceModel: Equatable {
 
 	let uuid: String
-	let name: String
+	let name: String?
 
 }

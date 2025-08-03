@@ -121,6 +121,12 @@
 		6F8C5FBD2E3E7BE500476A05 /* NavigatorErrorCatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FBC2E3E7BE000476A05 /* NavigatorErrorCatcher.swift */; };
 		6F8C5FC32E3E7CB300476A05 /* LocalStorageCRUDError+LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FC22E3E7CB000476A05 /* LocalStorageCRUDError+LocalizedError.swift */; };
 		6F8C5FC92E3EB58F00476A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F8C5FC82E3EB58F00476A05 /* LaunchScreen.storyboard */; };
+		6F8C5FCE2E3EB87400476A05 /* BluetoothServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FCD2E3EB87000476A05 /* BluetoothServiceProtocol.swift */; };
+		6F8C5FD02E3EB87E00476A05 /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FCF2E3EB87C00476A05 /* BluetoothService.swift */; };
+		6F8C5FD52E3F4B8100476A05 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F8C5FD32E3F4B8100476A05 /* InfoPlist.strings */; };
+		6F8C5FD92E3F544000476A05 /* DiscoveredDeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FD82E3F542600476A05 /* DiscoveredDeviceModel.swift */; };
+		6F8C5FDC2E3F63D600476A05 /* SearchDeviceItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FDB2E3F63D600476A05 /* SearchDeviceItemViewModel.swift */; };
+		6F8C5FDE2E3F92B900476A05 /* BluetoothServiceError+NavigationCatcherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C5FDD2E3F92B700476A05 /* BluetoothServiceError+NavigationCatcherError.swift */; };
 		92FB93B698F0C4872E34B26D /* Pods_PlayermakerTrybusheusky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6ECABDBD00865681ED47E3D /* Pods_PlayermakerTrybusheusky.framework */; };
 /* End PBXBuildFile section */
 
@@ -244,6 +250,14 @@
 		6F8C5FBC2E3E7BE000476A05 /* NavigatorErrorCatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorErrorCatcher.swift; sourceTree = "<group>"; };
 		6F8C5FC22E3E7CB000476A05 /* LocalStorageCRUDError+LocalizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalStorageCRUDError+LocalizedError.swift"; sourceTree = "<group>"; };
 		6F8C5FC82E3EB58F00476A05 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6F8C5FCD2E3EB87000476A05 /* BluetoothServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothServiceProtocol.swift; sourceTree = "<group>"; };
+		6F8C5FCF2E3EB87C00476A05 /* BluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
+		6F8C5FD42E3F4B8100476A05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6F8C5FD62E3F4B9700476A05 /* be */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = be; path = be.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6F8C5FD72E3F4B9800476A05 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6F8C5FD82E3F542600476A05 /* DiscoveredDeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveredDeviceModel.swift; sourceTree = "<group>"; };
+		6F8C5FDB2E3F63D600476A05 /* SearchDeviceItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDeviceItemViewModel.swift; sourceTree = "<group>"; };
+		6F8C5FDD2E3F92B700476A05 /* BluetoothServiceError+NavigationCatcherError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BluetoothServiceError+NavigationCatcherError.swift"; sourceTree = "<group>"; };
 		988F42D57C0C57D5C0AE27EE /* Pods-PlayermakerTrybusheusky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayermakerTrybusheusky.debug.xcconfig"; path = "Target Support Files/Pods-PlayermakerTrybusheusky/Pods-PlayermakerTrybusheusky.debug.xcconfig"; sourceTree = "<group>"; };
 		E6ECABDBD00865681ED47E3D /* Pods_PlayermakerTrybusheusky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayermakerTrybusheusky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -275,6 +289,7 @@
 		6F0822892E3981A00009A95E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				6F8C5FCA2E3EB85400476A05 /* Bluetooth */,
 				6F8C5F7F2E3E30F600476A05 /* LocalStorage */,
 				6F8C5EF92E3C0C0600476A05 /* Identity */,
 			);
@@ -785,6 +800,7 @@
 			isa = PBXGroup;
 			children = (
 				6F833F232E39758C00FFA71B /* Localizable.strings */,
+				6F8C5FD32E3F4B8100476A05 /* InfoPlist.strings */,
 			);
 			path = Localizable;
 			sourceTree = "<group>";
@@ -1113,6 +1129,7 @@
 		6F8C5F482E3D20EE00476A05 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6F8C5FDA2E3F63C700476A05 /* Views */,
 				6F8C5F472E3D20EE00476A05 /* Implementation */,
 			);
 			path = View;
@@ -1324,6 +1341,7 @@
 		6F8C5F862E3E323800476A05 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6F8C5FD82E3F542600476A05 /* DiscoveredDeviceModel.swift */,
 				6F8C5F9A2E3E44F500476A05 /* FavoriteDeviceSortCriterion.swift */,
 				6F8C5F872E3E324900476A05 /* FavoriteDeviceModel.swift */,
 			);
@@ -1435,9 +1453,43 @@
 		6F8C5FC12E3E7CAB00476A05 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
+				6F8C5FDD2E3F92B700476A05 /* BluetoothServiceError+NavigationCatcherError.swift */,
 				6F8C5FC22E3E7CB000476A05 /* LocalStorageCRUDError+LocalizedError.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		6F8C5FCA2E3EB85400476A05 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				6F8C5FCB2E3EB86000476A05 /* Interface */,
+				6F8C5FCC2E3EB86500476A05 /* Implementation */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		6F8C5FCB2E3EB86000476A05 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				6F8C5FCD2E3EB87000476A05 /* BluetoothServiceProtocol.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		6F8C5FCC2E3EB86500476A05 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				6F8C5FCF2E3EB87C00476A05 /* BluetoothService.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		6F8C5FDA2E3F63C700476A05 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F8C5FDB2E3F63D600476A05 /* SearchDeviceItemViewModel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A93FFB129B1D4E42A8C13AA3 /* Pods */ = {
@@ -1521,6 +1573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F8C5F7E2E3E09AF00476A05 /* EditDeviceView.xib in Resources */,
+				6F8C5FD52E3F4B8100476A05 /* InfoPlist.strings in Resources */,
 				6F0822872E3981120009A95E /* Colors.xcassets in Resources */,
 				6F8C5F262E3CAF0700476A05 /* FavoritesListView.xib in Resources */,
 				6F8C5F572E3D20EE00476A05 /* SearchDevicesView.xib in Resources */,
@@ -1618,6 +1671,7 @@
 				6F8C5F7C2E3E09AF00476A05 /* EditDeviceViewModel.swift in Sources */,
 				6F8C5F7D2E3E09AF00476A05 /* EditDeviceUseCaseProtocol.swift in Sources */,
 				6F8C5F072E3C152A00476A05 /* Window.swift in Sources */,
+				6F8C5FD02E3EB87E00476A05 /* BluetoothService.swift in Sources */,
 				6F0822C62E3982CC0009A95E /* RootUseCaseProtocol.swift in Sources */,
 				6F8C5F4D2E3D20EE00476A05 /* SearchDevicesDependenciesProtocol.swift in Sources */,
 				6F8C5F4E2E3D20EE00476A05 /* SearchDevicesNavigatorProtocol.swift in Sources */,
@@ -1645,6 +1699,7 @@
 				6F8C5F882E3E324C00476A05 /* FavoriteDeviceModel.swift in Sources */,
 				6F0822CE2E3982CC0009A95E /* RootDependenciesProtocol.swift in Sources */,
 				6F0822F02E3A07C50009A95E /* Single+Extensions.swift in Sources */,
+				6F8C5FCE2E3EB87400476A05 /* BluetoothServiceProtocol.swift in Sources */,
 				6F0822CF2E3982CC0009A95E /* LaunchView.swift in Sources */,
 				6F0822D02E3982CC0009A95E /* LaunchUseCaseProtocol.swift in Sources */,
 				6F8C5F8A2E3E384D00476A05 /* RealmLocalStorageService.swift in Sources */,
@@ -1662,6 +1717,7 @@
 				6F8C5F852E3E31AC00476A05 /* ReactiveLocalStorageServiceProtocol.swift in Sources */,
 				6F8C5F9B2E3E450700476A05 /* FavoriteDeviceSortCriterion.swift in Sources */,
 				6F0822D82E3982CC0009A95E /* LaunchDependencies.swift in Sources */,
+				6F8C5FDC2E3F63D600476A05 /* SearchDeviceItemViewModel.swift in Sources */,
 				6F0822E22E39FF440009A95E /* Navigator.swift in Sources */,
 				6F0822D92E3982CC0009A95E /* RootContextProtocol.swift in Sources */,
 				6F0822DA2E3982CC0009A95E /* RootNavigator.swift in Sources */,
@@ -1672,6 +1728,7 @@
 				6F833F2B2E3975FC00FFA71B /* ServiceDependencyResolverProtocol.swift in Sources */,
 				6F8C5FA52E3E631000476A05 /* FavoritesListSortMode+Extensions.swift in Sources */,
 				6F8C5FAA2E3E66F400476A05 /* Reusable.swift in Sources */,
+				6F8C5FD92E3F544000476A05 /* DiscoveredDeviceModel.swift in Sources */,
 				6F0822F72E3A09900009A95E /* ViewController.swift in Sources */,
 				6F833F102E396E7300FFA71B /* NavigationDependencyResolverAssembly.swift in Sources */,
 				6F833F0C2E396A2D00FFA71B /* NavigationDependencyResolverProtocol.swift in Sources */,
@@ -1699,6 +1756,7 @@
 				6F8C5F302E3CAF0700476A05 /* FavoritesListNavigator.swift in Sources */,
 				6F833F062E39694700FFA71B /* AppAssembly.swift in Sources */,
 				6F8C5FC32E3E7CB300476A05 /* LocalStorageCRUDError+LocalizedError.swift in Sources */,
+				6F8C5FDE2E3F92B900476A05 /* BluetoothServiceError+NavigationCatcherError.swift in Sources */,
 				6F0822E02E39FF1E0009A95E /* ViewModelType.swift in Sources */,
 				6F833F2D2E39764900FFA71B /* ServiceDependencyResolverAssembly.swift in Sources */,
 				6F833EF92E39669C00FFA71B /* SceneDelegate.swift in Sources */,
@@ -1718,6 +1776,16 @@
 				6F8C5F032E3C0D7A00476A05 /* be */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		6F8C5FD32E3F4B8100476A05 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F8C5FD42E3F4B8100476A05 /* en */,
+				6F8C5FD62E3F4B9700476A05 /* be */,
+				6F8C5FD72E3F4B9800476A05 /* ru */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

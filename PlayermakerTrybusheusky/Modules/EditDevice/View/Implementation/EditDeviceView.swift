@@ -73,7 +73,7 @@ extension EditDeviceView {
 		let input = EditDeviceViewModel.Input(
 			willAppearTrigger: rx.viewWillAppear.asDriverOnErrorDoNothing(),
 			willDismissTrigger: rx.willBeingDismissed.asDriver(onErrorJustReturn: true).filter { $0 }.mapToVoid(),
-			nameChangingTrigger: nameTextField.rx.text.unwrappedNever().asDriverOnErrorDoNothing(),
+			nameChangingTrigger: nameTextField.rx.text.asDriverOnErrorDoNothing(),
 			saveTrigger: saveButton.rx.tap.asDriver(),
 			closeTrigger: closeButton.rx.tap.asDriver()
 		)

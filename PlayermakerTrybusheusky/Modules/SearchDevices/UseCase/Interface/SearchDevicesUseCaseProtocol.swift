@@ -7,4 +7,10 @@
 
 import RxSwift
 
-protocol SearchDevicesUseCaseProtocol {}
+protocol SearchDevicesUseCaseProtocol {
+
+	var favoriteDevices: Observable<[FavoriteDeviceModel]> { get }
+
+	func startScanning() -> Observable<[DiscoveredDeviceModel]>
+
+}

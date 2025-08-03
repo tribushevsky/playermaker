@@ -20,4 +20,27 @@ final class SearchDevicesUseCase {
 
 // MARK: - SearchDevicesUseCaseProtocol
 
-extension SearchDevicesUseCase: SearchDevicesUseCaseProtocol {}
+extension SearchDevicesUseCase: SearchDevicesUseCaseProtocol {
+
+	var favoriteDevices: Observable<[FavoriteDeviceModel]> {
+		dependencies.storage.samples(sort: .uuid)
+	}
+
+	func startScanning() -> Observable<[DiscoveredDeviceModel]> {
+		Observable.create { [unowned self] observer in
+			dependencies.bluetooth.startScanning { result in
+				switch result {
+				case .success(let devices):
+					observer.onNext(devices)
+				case .failure(let error):
+					observer.onError(error)
+				}
+			}
+
+			return Disposables.create { [weak self] in
+				self?.dependencies.bluetooth.stopScanning()
+			}
+		}
+	}
+
+}

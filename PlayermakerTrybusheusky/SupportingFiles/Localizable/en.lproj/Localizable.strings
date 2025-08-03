@@ -8,17 +8,20 @@
 
 "identity.developer_name" = "Vladimir Tribushevsky";
 
+"delete.sure.title" = "ARE YOU SURE?";
+"delete.sure.action" = "Delete";
+"delete.sure.cancel" = "Cancel";
+
 "favorites_list.title" = "Favorite Devices";
 "favorites_list.sort.name" = "Name";
 "favorites_list.sort.uuid" = "UUID";
 "favorites_list.placeholder" = "Not found";
 "favorites_list.main_button" = "Add New Devices";
+"favorites_list.item.unknown_name" = "Unknown Name";
 
 "search_devices.title" = "Search Devices...";
 
-"delete.sure.title" = "ARE YOU SURE?";
-"delete.sure.action" = "Delete";
-"delete.sure.cancel" = "Cancel";
+
 
 "device_info.title" = "Device info";
 "device_info.uuid_title" = "UUID:";
@@ -28,4 +31,14 @@
 "error.something_went_wrong.try_later.title" = "Something went wrong";
 "error.something_went_wrong.try_later.message" = "Please, try later!";
 
+"error.bluetooth.title.turned_off" = "Bluetooth Turned Off";
+"error.bluetooth.title.unauthorized" = "Bluetooth permissions not granted";
+"error.bluetooth.title.general" = "Something went wrong";
+
+"error.bluetooth.message.turned_off" = "Turn on Bluetooth in the Settings/Bluetooth";
+"error.bluetooth.message.unauthorized" = "Allow Bluetooth access in the PlayermakerTrybusheusky app's settings";
+"error.bluetooth.message.general" = "Please, try later!";
+
 "error.action.ok" = "OK";
+"error.action.settings" = "Settings";
+"error.action.cancel" = "Cancel";

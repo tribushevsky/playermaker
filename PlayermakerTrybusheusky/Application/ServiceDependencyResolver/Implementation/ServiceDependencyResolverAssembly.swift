@@ -13,6 +13,7 @@ final class ServiceDependencyResolverAssembly: Assembly {
 		registerDependencyResolver(container: container)
 		registerIdentityService(container: container)
 		registerLocalStorageService(container: container)
+		registerBluetoothService(container: container)
 	}
 
 }
@@ -40,6 +41,12 @@ extension ServiceDependencyResolverAssembly {
 			}
 
 			return service
+		}.inObjectScope(.container)
+	}
+
+	func registerBluetoothService(container: Container) {
+		container.register(BluetoothServiceProtocol.self) { resolver in
+			BluetoothService()
 		}.inObjectScope(.container)
 	}
 

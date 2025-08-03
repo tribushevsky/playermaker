@@ -77,18 +77,11 @@ extension FavoritesListViewModel {
 extension FavoritesListViewModel {
 
 	func handleSearchDevices(trigger: Driver<Void>) -> Driver<Void> {
-		trigger.flatMapLatest { [unowned self] in
-			useCase
-				.createDevice(device: .init(uuid: UUID().uuidString, name: "VLADRIMIR") )
+		trigger.flatMapLatest { [unowned self] _ in
+			navigator
+				.routeToSearchDevices()
 				.asDriverOnErrorDoNothing()
-				.mapToVoid()
 		}
-// FIXME
-//		trigger.flatMapLatest { [unowned self] _ in
-//			navigator
-//				.routeToSearchDevices()
-//				.asDriverOnErrorDoNothing()
-//		}
 	}
 
 	func handleFavoritesSortMode(
@@ -172,7 +165,7 @@ extension FavoritesListViewModel {
 			devices.map {
 				FavoriteListItemViewModel(
 					uuid: $0.uuid,
-					title: $0.name,
+					title: $0.name ?? L10n.FavoritesList.Item.unknownName,
 					subtitle: $0.uuid
 				)
 			}

@@ -16,12 +16,12 @@ final class EditDeviceViewModel: ViewModelType {
 	struct Input {
 		let willAppearTrigger: Driver<Void>
 		let willDismissTrigger: Driver<Void>
-		let nameChangingTrigger: Driver<String>
+		let nameChangingTrigger: Driver<String?>
 		let saveTrigger: Driver<Void>
 		let closeTrigger: Driver<Void>
 	}
 	struct Output {
-		let deviceName: Driver<String>
+		let deviceName: Driver<String?>
 		let deviceUUID: Driver<String>
 		let tools: Driver<Void>
 	}
@@ -82,7 +82,7 @@ extension EditDeviceViewModel {
 	func handleSave(
 		saveTrigger: Driver<Void>,
 		deviceUUID: Driver<String>,
-		deviceName: Driver<String>
+		deviceName: Driver<String?>
 	) -> Driver<Void> {
 		saveTrigger.withLatestFrom(
 			Driver.combineLatest(deviceUUID, deviceName)
@@ -90,7 +90,7 @@ extension EditDeviceViewModel {
 			self?.navigator.nextAndComplete(
 				element: .init(
 					uuid: params.0,
-					name: params.1
+					name: params.1.flatMap { $0.isEmpty ? String?.none : $0 }
 				)
 			)
 		}).mapToVoid()

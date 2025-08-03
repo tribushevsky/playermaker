@@ -32,8 +32,30 @@ internal enum L10n {
   }
   internal enum Error {
     internal enum Action {
+      /// Cancel
+      internal static let cancel = L10n.tr("Localizable", "error.action.cancel", fallback: "Cancel")
       /// OK
       internal static let ok = L10n.tr("Localizable", "error.action.ok", fallback: "OK")
+      /// Settings
+      internal static let settings = L10n.tr("Localizable", "error.action.settings", fallback: "Settings")
+    }
+    internal enum Bluetooth {
+      internal enum Message {
+        /// Please, try later!
+        internal static let general = L10n.tr("Localizable", "error.bluetooth.message.general", fallback: "Please, try later!")
+        /// Turn on Bluetooth in the Settings/Bluetooth
+        internal static let turnedOff = L10n.tr("Localizable", "error.bluetooth.message.turned_off", fallback: "Turn on Bluetooth in the Settings/Bluetooth")
+        /// Allow Bluetooth access in the PlayermakerTrybusheusky app's settings
+        internal static let unauthorized = L10n.tr("Localizable", "error.bluetooth.message.unauthorized", fallback: "Allow Bluetooth access in the PlayermakerTrybusheusky app's settings")
+      }
+      internal enum Title {
+        /// Something went wrong
+        internal static let general = L10n.tr("Localizable", "error.bluetooth.title.general", fallback: "Something went wrong")
+        /// Bluetooth Turned Off
+        internal static let turnedOff = L10n.tr("Localizable", "error.bluetooth.title.turned_off", fallback: "Bluetooth Turned Off")
+        /// Bluetooth permissions not granted
+        internal static let unauthorized = L10n.tr("Localizable", "error.bluetooth.title.unauthorized", fallback: "Bluetooth permissions not granted")
+      }
     }
     internal enum SomethingWentWrong {
       internal enum TryLater {
@@ -51,6 +73,10 @@ internal enum L10n {
     internal static let placeholder = L10n.tr("Localizable", "favorites_list.placeholder", fallback: "Not found")
     /// Favorite Devices
     internal static let title = L10n.tr("Localizable", "favorites_list.title", fallback: "Favorite Devices")
+    internal enum Item {
+      /// Unknown Name
+      internal static let unknownName = L10n.tr("Localizable", "favorites_list.item.unknown_name", fallback: "Unknown Name")
+    }
     internal enum Sort {
       /// Name
       internal static let name = L10n.tr("Localizable", "favorites_list.sort.name", fallback: "Name")
