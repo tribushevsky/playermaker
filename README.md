@@ -13,19 +13,14 @@ Module Structure:
 - DEPENDENCY: Stores service dependencies for the module (e.g., Storage, Bluetooth, etc.)
 - DEPENDENCY INJECTION: Constructs modules by setting up dependencies between module components and preparing services for the module
 
-   ........... rx ...............
-   .							.
-   .							.
-   \/							.
-  VIEW ..... strong .....> VIEW_MODEL .....> strong .....> USE_CASE ..... strong ..... > DEPENDENCY
-   /\						.	/\
-   .						.	.
-   .						.	.
-   .				strong	.	. rx
-   .						.	.
-   .						.	.
-   .						\/	.
-   ......... weak .........NAVIGATOR
+   ........ rx ..............
+   \/						.
+  VIEW .. strong ..> VIEW_MODEL .. strong .. > USE_CASE .. strong .. > DEPENDENCY
+   /\					.	/\
+   .					.	.
+   .			strong	.	. rx
+   .					\/	.
+   ...... weak .........NAVIGATOR
 
 ## Dependencies
 
@@ -39,7 +34,7 @@ Module Structure:
 ## How to run
 
 1. Clone the git repository: https://github.com/tribushevsky/playermaker.git
-2. Navigate to the cloned repository folder:
+2. Navigate to the cloned repository folder
 3. Run Dependency Install command:
 ```yaml
 pod install 
