@@ -28,10 +28,13 @@ Module Structure:
 #   ......... weak ....... NAVIGATOR 
 ``` 
 
-## Dependencies
+## Tech & Dependencies
 
-- CocoaPors: Dependency Manager
-- RealmSwift: Local Storage DB
+- Programming Language: Swift
+- Layout: UIKit
+- Dependency Manager: CocoaPors
+- Local Storage DB: RealmSwift
+
 - RxSwift, RxCocoa, RxRealm, RxDataSources: Implementation of the Reactive Paradigm in Swift
 - SnapKit: Autolayout UI in code
 - Swinject: Dependency Injection
