@@ -48,7 +48,7 @@ Module Structure:
 ```yaml
 pod install 
 ``` 
-4. After successfull pods installation open the PlayermakerTrybusheusky.xcworkspace file:
+4. After successfull pods installation open the PlayermakerTrybusheusky.xcworkspace file using Xcode 16.2:
 ```yaml
 open PlayermakerTrybusheusky.xcworkspace
 ```
