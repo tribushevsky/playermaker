@@ -7,7 +7,41 @@
 */
 
 "identity.developer_name" = "Владимир Трибушевский";
+
+"delete.sure.title" = "ВЫ УВЕРЕНЫ?";
+"delete.sure.action" = "Удалить";
+"delete.sure.cancel" = "Отмена";
+
 "favorites_list.title" = "Избранные устройства";
-"favorites_list.placeholder" = "Не найдены";
-"favorites_list.main_button" = "Добавить Новый Девайс";
-"search_devices.title" = "Поиск Девайсов...";
+"favorites_list.sort.name" = "Имя";
+"favorites_list.sort.uuid" = "UUID";
+"favorites_list.placeholder" = "Не найдено";
+"favorites_list.main_button" = "Добавить новое устройство";
+"favorites_list.item.unknown_name" = "Неизвестное имя";
+
+"search_devices.title" = "Поиск устройств...";
+"search_devices.item.rssi_title" = "RSSI";
+"search_devices.item.unknown_name" = "Неизвестное имя";
+
+"device_info.title" = "Информация об устройстве";
+"device_info.uuid_title" = "UUID:";
+"device_info.name_title" = "Имя:";
+"device_info.save" = "Сохранить";
+
+"error.search_devices.not_found.title" = "Устройство не найдено";
+"error.search_devices.not_found.message" = "Пожалуйста, попробуйте еще раз";
+
+"error.something_went_wrong.try_later.title" = "Что-то пошло не так";
+"error.something_went_wrong.try_later.message" = "Пожалуйста, попробуйте позже!";
+
+"error.bluetooth.title.turned_off" = "Bluetooth выключен";
+"error.bluetooth.title.unauthorized" = "Нет доступа к Bluetooth";
+"error.bluetooth.title.general" = "Что-то пошло не так";
+
+"error.bluetooth.message.turned_off" = "Включите Bluetooth в Приложении Настройки > Bluetooth";
+"error.bluetooth.message.unauthorized" = "Разрешите доступ к Bluetooth в настройках приложения PlayermakerTrybusheusky";
+"error.bluetooth.message.general" = "Пожалуйста, попробуйте позже!";
+
+"error.action.ok" = "ОК";
+"error.action.settings" = "Настройки";
+"error.action.cancel" = "Отмена";

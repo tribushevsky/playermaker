@@ -29,16 +29,16 @@
 "device_info.save" = "Save";
 
 "error.search_devices.not_found.title" = "Device not found";
-"error.search_devices.not_found.message" = "Please, try one more time";
+"error.search_devices.not_found.message" = "Please try one more time";
 
 "error.something_went_wrong.try_later.title" = "Something went wrong";
-"error.something_went_wrong.try_later.message" = "Please, try later!";
+"error.something_went_wrong.try_later.message" = "Please try later!";
 
 "error.bluetooth.title.turned_off" = "Bluetooth Turned Off";
 "error.bluetooth.title.unauthorized" = "Bluetooth permissions not granted";
 "error.bluetooth.title.general" = "Something went wrong";
 
-"error.bluetooth.message.turned_off" = "Turn on Bluetooth in the Settings/Bluetooth";
+"error.bluetooth.message.turned_off" = "Turn on Bluetooth in the Settings > Bluetooth";
 "error.bluetooth.message.unauthorized" = "Allow Bluetooth access in the PlayermakerTrybusheusky app's settings";
 "error.bluetooth.message.general" = "Please, try later!";
 

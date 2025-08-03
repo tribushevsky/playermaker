@@ -7,7 +7,41 @@
 */
 
 "identity.developer_name" = "Уладзімір Трыбушэўскі";
-"favorites_list.title" = "Выбраныя прылады";
-"favorites_list.placeholder" = "Не знойдзены";
-"favorites_list.main_button" = "Дадаць Новы Дэвайс";
-"search_devices.title" = "Пошук Прылад...";
+
+"delete.sure.title" = "ВЫ САПРАЎДЫ ХОЧАЦЕ?";
+"delete.sure.action" = "Выдаліць";
+"delete.sure.cancel" = "Скасаваць";
+
+"favorites_list.title" = "Абраныя прылады";
+"favorites_list.sort.name" = "Імя";
+"favorites_list.sort.uuid" = "UUID";
+"favorites_list.placeholder" = "Не знойдзена";
+"favorites_list.main_button" = "Дадаць новую прыладу";
+"favorites_list.item.unknown_name" = "Невядомае імя";
+
+"search_devices.title" = "Пошук прылад...";
+"search_devices.item.rssi_title" = "RSSI";
+"search_devices.item.unknown_name" = "Невядомае імя";
+
+"device_info.title" = "Інфармацыя пра прыладу";
+"device_info.uuid_title" = "UUID:";
+"device_info.name_title" = "Імя:";
+"device_info.save" = "Захаваць";
+
+"error.search_devices.not_found.title" = "Прылада не знойдзена";
+"error.search_devices.not_found.message" = "Калі ласка, паспрабуйце яшчэ раз";
+
+"error.something_went_wrong.try_later.title" = "Нешта пайшло не так";
+"error.something_went_wrong.try_later.message" = "Калі ласка, паспрабуйце пазней!";
+
+"error.bluetooth.title.turned_off" = "Bluetooth выключаны";
+"error.bluetooth.title.unauthorized" = "Доступ да Bluetooth не дазволены";
+"error.bluetooth.title.general" = "Нешта пайшло не так";
+
+"error.bluetooth.message.turned_off" = "Уключыце Bluetooth у Наладах > Bluetooth";
+"error.bluetooth.message.unauthorized" = "Дазвольце доступ да Bluetooth у наладах праграмы PlayermakerTrybusheusky";
+"error.bluetooth.message.general" = "Калі ласка, паспрабуйце пазней!";
+
+"error.action.ok" = "ОК";
+"error.action.settings" = "Налады";
+"error.action.cancel" = "Скасаваць";
