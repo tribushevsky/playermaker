@@ -20,7 +20,7 @@ final class FavoritesListView: ViewController<FavoritesListViewModel> {
 	@IBOutlet fileprivate weak var favoritesListContainerView: UIView!
 	@IBOutlet fileprivate weak var placeholderView: UIView!
 	@IBOutlet private weak var placeholderTitleLabel: UILabel!
-	@IBOutlet fileprivate weak var tableView: UITableView!
+	@IBOutlet fileprivate weak var favoritesDevicesTableView: UITableView!
 	@IBOutlet private weak var mainButton: UIButton!
 	@IBOutlet private weak var gradientDecorationView: GradientView!
 
@@ -37,8 +37,12 @@ final class FavoritesListView: ViewController<FavoritesListViewModel> {
 
 				if let deviceCell = cell as? FavoriteListItemCell {
 					deviceCell.viewModel = viewModel
-					deviceCell.rx.editTap.map { viewModel }.drive(self.rx.itemEditTap).disposed(by: self.disposeBag)
-					deviceCell.rx.deleteTap.map { viewModel }.drive(self.rx.itemDeleteTap).disposed(by: self.disposeBag)
+					deviceCell.rx.editTap.map { viewModel }
+						.drive(self.rx.itemEditTap)
+						.disposed(by: self.disposeBag)
+					deviceCell.rx.deleteTap.map { viewModel }
+						.drive(self.rx.itemDeleteTap)
+						.disposed(by: self.disposeBag)
 				}
 
 				return cell
@@ -73,7 +77,7 @@ final class FavoritesListView: ViewController<FavoritesListViewModel> {
 extension FavoritesListView {
 
 	private func setupView() {
-		FavoriteListItemCell.register(in: tableView)
+		FavoriteListItemCell.register(in: favoritesDevicesTableView)
 	}
 
 	private func localize() {
@@ -102,7 +106,7 @@ extension FavoritesListView {
 		output.sortMode.drive(rx.sortMode).disposed(by: disposeBag)
 		output.favorites.map { !$0.isEmpty }.drive(rx.isFavoritesVisible).disposed(by: disposeBag)
 		output.favorites.map {[FavoriteListItemSection(items: $0)] }
-			.drive(tableView.rx.items(dataSource: dataSource))
+			.drive(favoritesDevicesTableView.rx.items(dataSource: dataSource))
 			.disposed(by: disposeBag)
 
 		output.tools.drive().disposed(by: disposeBag)
@@ -124,7 +128,7 @@ extension Reactive where Base: FavoritesListView {
 
 	var sortMode: Binder<FavoritesListSortMode> {
 		Binder(base) { view, sortMode in
-			view.tableView.scrollToTop(animated: false)
+			view.favoritesDevicesTableView.scrollToTop(animated: false)
 
 			switch sortMode {
 			case .name:

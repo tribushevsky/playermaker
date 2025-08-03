@@ -30,6 +30,9 @@ internal enum Images {
   internal enum General {
     internal static let close = ImageAsset(name: "General/close")
   }
+  internal enum SearchDevice {
+    internal static let favorite = ImageAsset(name: "SearchDevice/favorite")
+  }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

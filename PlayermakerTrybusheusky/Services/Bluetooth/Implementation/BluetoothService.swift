@@ -94,7 +94,6 @@ extension BluetoothService: BluetoothServiceProtocol {
 extension BluetoothService: CBCentralManagerDelegate {
 
 	func centralManagerDidUpdateState(_ central: CBCentralManager) {
-		print("|_|C \(central.state)")
 		if let centralManager, centralManager.state == .poweredOn, syncDataService.isScanning {
 			centralManager.scanForPeripherals(withServices: nil, options: nil)
 		} else {
@@ -108,8 +107,8 @@ extension BluetoothService: CBCentralManagerDelegate {
 		advertisementData: [String: Any],
 		rssi RSSI: NSNumber
 	) {
-		print("|_| \(peripheral.identifier) -> \(peripheral.name ?? "unknown") -> \(RSSI) ")
 		discoveredPeripherals[peripheral.identifier] = (peripheral, RSSI)
+		discoveryHandler?(.success(discoveredDevices))
 	}
 
 }

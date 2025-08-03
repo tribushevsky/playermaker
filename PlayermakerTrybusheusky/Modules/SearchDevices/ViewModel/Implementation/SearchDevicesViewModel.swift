@@ -17,9 +17,10 @@ final class SearchDevicesViewModel: ViewModelType {
 		let didAppearTrigger: Driver<Void>
 		let willDismissTrigger: Driver<Void>
 		let closeTrigger: Driver<Void>
+		let toggleFavoriteTrigger: Driver<SearchDevicesItemViewModel>
 	}
 	struct Output {
-		let devices: Driver<[SearchDeviceItemViewModel]>
+		let devices: Driver<[SearchDevicesItemViewModel]>
 		let tools: Driver<Void>
 	}
 	
@@ -69,7 +70,7 @@ extension SearchDevicesViewModel {
 	func mapDevices(
 		discoveredDevices: Driver<[DiscoveredDeviceModel]>,
 		favoriteDevices: Driver<[FavoriteDeviceModel]>
-	) -> Driver<[SearchDeviceItemViewModel]> {
+	) -> Driver<[SearchDevicesItemViewModel]> {
 		Driver.combineLatest(
 			discoveredDevices.distinctUntilChanged(),
 			favoriteDevices.distinctUntilChanged()
@@ -78,14 +79,24 @@ extension SearchDevicesViewModel {
 			data.0
 				.sorted { $0.uuid > $1.uuid }
 				.map { discoveredDevice in
-					SearchDeviceItemViewModel(
-						uuid: discoveredDevice.uuid,
-						name: discoveredDevice.name,
-						isFavorite: data.1.contains(where: { $0.uuid == discoveredDevice.uuid }),
+					var deviceName: String? = discoveredDevice.name
+					var isFavorite: Bool = false
+
+					if
+						let favoriteDevice = data.1.first(where: { $0.uuid == discoveredDevice.uuid })
+					{
+						deviceName = favoriteDevice.name
+						isFavorite = true
+					}
+
+					return SearchDevicesItemViewModel(
+						title: deviceName ?? L10n.SearchDevices.Item.unknownName,
+						subtitle: discoveredDevice.uuid,
+						isFavorite: isFavorite,
 						rssi: discoveredDevice.rssi
 					)
 				}
-		}
+		}.startWith([])
 	}
 
 	func handleStartScanning(trigger: Driver<Void>) -> Driver<[DiscoveredDeviceModel]> {

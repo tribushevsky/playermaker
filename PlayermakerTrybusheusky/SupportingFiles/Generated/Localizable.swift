@@ -94,6 +94,12 @@ internal enum L10n {
   internal enum SearchDevices {
     /// Search Devices...
     internal static let title = L10n.tr("Localizable", "search_devices.title", fallback: "Search Devices...")
+    internal enum Item {
+      /// RSSI
+      internal static let rssiTitle = L10n.tr("Localizable", "search_devices.item.rssi_title", fallback: "RSSI")
+      /// Unknown Name
+      internal static let unknownName = L10n.tr("Localizable", "search_devices.item.unknown_name", fallback: "Unknown Name")
+    }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
