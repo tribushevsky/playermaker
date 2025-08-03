@@ -14,19 +14,18 @@ Module Structure:
 - DEPENDENCY INJECTION: Constructs modules by setting up dependencies between module components and preparing services for the module
 
 ```yaml
-   ........... rx ...............
-   .							.
-								.
-   \/							.
-  VIEW ..... strong .....> VIEW_MODEL .....> strong .....> USE_CASE ..... strong ..... > DEPENDENCY
-   /\						.	/\
-   .						.	.
-   .						.	.
-   .				strong	.	. rx
-   .						.	.
-   .						.	.
-   .						\/	.
-   ......... weak .........NAVIGATOR 
+#   ......... rx .............
+#   .						.
+#   .						.
+#   \/						.
+#  VIEW ... strong ...> VIEW_MODEL ... strong ...> USE_CASE ... strong ...> DEPENDENCY
+#   /\						.	/\
+#   .						.	.
+#   .						.	.
+#   .				strong	.	. rx
+#   .						.	.
+#   .						\/	.
+#   ......... weak ....... NAVIGATOR 
 ``` 
 
 ## Dependencies
