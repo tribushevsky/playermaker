@@ -68,6 +68,7 @@ open PlayermakerTrybusheusky.xcworkspace
 ## Bonus features
 
 - Dark/Light mode is applied based on the device's system settings;
+- Dependency Injection integration for serives and modules;
 - Sorting feature is available on the Favorites List screen;
 - Localization is supported for three languages: English, Russian, and Belarusian. The language changes automatically according to the device's language settings;
 - Code generation for resources (images, colors, fonts, and localizations). Improves development efficiency and ensures type safety, eliminating resource-related compilation errors in production.
