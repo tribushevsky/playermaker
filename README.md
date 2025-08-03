@@ -15,16 +15,16 @@ Module Structure:
 
 ```yaml
 #   ......... rx .............
-#   .						.
-#   .						.
-#   \/						.
+#   .                        .
+#   .                        .
+#   \/                       .
 #  VIEW ... strong ...> VIEW_MODEL ... strong ...> USE_CASE ... strong ...> DEPENDENCY
-#   /\						.	/\
-#   .						.	.
-#   .						.	.
-#   .				strong	.	. rx
-#   .						.	.
-#   .						\/	.
+#   /\                      .   /\
+#   .                       .   .
+#   .                       .   .
+#   .                strong .   . rx
+#   .                       .   .
+#   .                       \/  .
 #   ......... weak ....... NAVIGATOR 
 ``` 
 
